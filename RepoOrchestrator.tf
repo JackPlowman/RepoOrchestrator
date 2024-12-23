@@ -1,6 +1,5 @@
 resource "github_repository" "RepoOrchestrator" {
   #checkov:skip=CKV_GIT_1
-  #checkov:skip=CKV2_GIT_1
   name        = "RepoOrchestrator"
   description = "Keep all my repositories in sync."
   visibility  = "public"
