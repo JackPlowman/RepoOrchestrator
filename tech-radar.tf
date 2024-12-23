@@ -1,10 +1,10 @@
 resource "github_repository" "tech-radar" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name        = "tech-radar"
-  description = "My Tech Radar"
-  visibility  = "public"
-  homepage_url                = "https://jackplowman.github.io/tech-radar/"
+  name         = "tech-radar"
+  description  = "My Tech Radar"
+  visibility   = "public"
+  homepage_url = "https://jackplowman.github.io/tech-radar/"
 
   # Repository Features
   has_issues   = true
@@ -23,7 +23,7 @@ resource "github_repository" "tech-radar" {
   has_downloads        = false
   vulnerability_alerts = true
 
-    # GitHub Pages settings
+  # GitHub Pages settings
   pages {
     build_type = "workflow"
 
