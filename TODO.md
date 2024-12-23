@@ -1,10 +1,5 @@
 # TODO
 
-## Add Repositories
-
-- test-project-status-checker
-- aws-timing-scripts
-
 ## Set attributes
 
 - Turn on vulnerability alerts
