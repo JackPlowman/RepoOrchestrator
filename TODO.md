@@ -8,7 +8,6 @@
 - create-repository-tasks
 - RepoSync
 - project-status-checker
-- status-sentinel
 - aws-timing-scripts
 
 ## Set attributes
