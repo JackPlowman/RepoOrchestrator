@@ -26,7 +26,6 @@ resource "github_repository" "tech-radar" {
   # GitHub Pages settings
   pages {
     build_type = "workflow"
-
     source {
       branch = "main"
       path   = "/"
