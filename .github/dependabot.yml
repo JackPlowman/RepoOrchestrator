@@ -4,8 +4,6 @@ updates:
   - package-ecosystem: "github-actions"
     directories:
       - "/"
-    commit-message:
-      prefix: "deps(github-actions)"
     schedule:
       interval: "weekly"
       day: "saturday"
@@ -14,6 +12,23 @@ updates:
     target-branch: "main"
     groups:
       github-actions:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
+
+  - package-ecosystem: "terraform"
+    directories:
+      - "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "01:00"
+      timezone: "Europe/London"
+    target-branch: "main"
+    groups:
+      terraform:
         patterns:
           - "*"
         update-types:
