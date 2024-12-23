@@ -12,7 +12,6 @@
 - python-practice
 - project-status-checker
 - status-sentinel
-- development-environment
 - aws-timing-scripts
 
 ## Set attributes
