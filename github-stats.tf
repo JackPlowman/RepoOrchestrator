@@ -1,10 +1,14 @@
-resource "github_repository" "development-ideas" {
+resource "github_repository" "github-stats" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "development-ideas"
-  description  = "A place to list my project ideas"
-  visibility   = "public"
-  homepage_url = "https://jackplowman.github.io/development-ideas/"
+  name        = "github-stats"
+  description = ""
+  visibility  = "public"
+  homepage_url                = "https://jackplowman.github.io/github-stats/"
+
+  # Repository Features
+  has_issues   = true
+  has_projects = true
 
   # Pull Request settings
   allow_auto_merge            = true
