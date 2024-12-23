@@ -25,7 +25,6 @@
 - Turn on secret scanning
 - Turn off discussions
 
-
 ## Other
 
 - Add a README.md
