@@ -1,0 +1,29 @@
+# TODO
+
+## Add Repositories
+
+- test-project-status-checker
+- screenshot_mailinator_email
+- development-ideas
+- github-pr-analyser
+- github-stats
+- pr-proofreader
+- depup
+- github-stats-analyser
+- create-repository-tasks
+- source_scan
+- RepoSync
+- python-practice
+- project-status-checker
+- status-sentinel
+- development-environment
+- tech-radar
+- aws-timing-scripts
+- GitHubPulse
+
+## Set attributes
+
+- Turn on vulnerability alerts
+- Torn on GitHub Pages (if applicable)
+- Turn on secret scanning
+- Turn off discussions
