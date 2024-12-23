@@ -11,6 +11,7 @@ permissions: {}
 
 jobs:
   configure-labels:
+    name: Configure Labels
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,3 +27,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           manifest: .github/other-configurations/labels.yml
+
