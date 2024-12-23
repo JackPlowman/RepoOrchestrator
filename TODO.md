@@ -24,6 +24,6 @@
 ## Set attributes
 
 - Turn on vulnerability alerts
-- Torn on GitHub Pages (if applicable)
+- Turn on GitHub Pages (if applicable)
 - Turn on secret scanning
 - Turn off discussions
