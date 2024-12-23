@@ -7,7 +7,6 @@
 - github-stats-analyser
 - create-repository-tasks
 - RepoSync
-- project-status-checker
 - aws-timing-scripts
 
 ## Set attributes
