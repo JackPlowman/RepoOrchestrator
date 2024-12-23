@@ -45,6 +45,7 @@ resource "github_repository_ruleset" "RepoOrchestrator_default_ruleset" {
     non_fast_forward        = true
     required_linear_history = true
     required_signatures     = true
+
     pull_request {
       dismiss_stale_reviews_on_push     = true
       require_code_owner_review         = false
@@ -76,8 +77,8 @@ resource "github_repository_ruleset" "RepoOrchestrator_default_ruleset" {
 
     required_code_scanning {
       required_code_scanning_tool {
-        tool = "zizmor"
-        alerts_threshold = "all"
+        tool                      = "zizmor"
+        alerts_threshold          = "all"
         security_alerts_threshold = "critical"
       }
     }
