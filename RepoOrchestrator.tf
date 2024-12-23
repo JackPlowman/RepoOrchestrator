@@ -1,8 +1,8 @@
-resource "github_repository" "JackPlowman" {
+resource "github_repository" "RepoOrchestrator" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name        = "JackPlowman"
-  description = "My Profile"
+  name        = "RepoOrchestrator"
+  description = "Keep all my repositories in sync."
   visibility  = "public"
 
   # Pull Request settings
