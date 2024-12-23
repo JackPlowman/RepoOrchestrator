@@ -6,7 +6,7 @@ resource "github_repository" "depup" {
   visibility  = "public"
 
   # Repository Features
-  has_issues = true
+  has_issues   = true
   has_projects = true
 
   # Pull Request settings
