@@ -34,6 +34,8 @@
 - color: cd00ff
   name: tofu
   description: Pull requests that update Tofu/Terraform code
+- name: github_actions
+  description: Pull requests that update GitHub Actions code
 - color: 00ff44
   name: shell
   description: Pull requests that update Shell code
@@ -47,9 +49,6 @@
 - color: ff0073
   name: git_hooks
   description: Pull requests that update git hooks
-- color: f27100
-  name: checker
-  description: Pull requests that update checker code
 # Sizes
 - color: 00ff22
   name: size/XS
