@@ -14,7 +14,6 @@
 - project-status-checker
 - status-sentinel
 - development-environment
-- tech-radar
 - aws-timing-scripts
 
 ## Set attributes
