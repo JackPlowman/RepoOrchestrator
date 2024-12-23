@@ -1,9 +1,9 @@
 resource "github_repository" "GitHubPulse" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "GitHubPulse"
-  description  = ""
-  visibility   = "public"
+  name        = "GitHubPulse"
+  description = ""
+  visibility  = "public"
 
   # Repository Features
   has_issues   = true

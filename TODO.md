@@ -16,7 +16,6 @@
 - development-environment
 - tech-radar
 - aws-timing-scripts
-- GitHubPulse
 
 ## Set attributes
 
