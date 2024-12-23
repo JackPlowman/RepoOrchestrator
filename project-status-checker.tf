@@ -1,9 +1,9 @@
 resource "github_repository" "project-status-checker" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "project-status-checker"
-  description  = "GitHub Action to Check Project Statuses"
-  visibility   = "public"
+  name        = "project-status-checker"
+  description = "GitHub Action to Check Project Statuses"
+  visibility  = "public"
 
   # Repository Features
   has_issues   = true
