@@ -7,7 +7,6 @@
 - github-stats-analyser
 - create-repository-tasks
 - RepoSync
-- python-practice
 - project-status-checker
 - status-sentinel
 - aws-timing-scripts
