@@ -3,7 +3,6 @@
 ## Add Repositories
 
 - test-project-status-checker
-- github-stats
 - pr-proofreader
 - github-stats-analyser
 - create-repository-tasks
