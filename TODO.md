@@ -6,7 +6,6 @@
 - pr-proofreader
 - github-stats-analyser
 - create-repository-tasks
-- RepoSync
 - aws-timing-scripts
 
 ## Set attributes
