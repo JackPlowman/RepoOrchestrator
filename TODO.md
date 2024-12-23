@@ -3,7 +3,6 @@
 ## Add Repositories
 
 - test-project-status-checker
-- pr-proofreader
 - aws-timing-scripts
 
 ## Set attributes
