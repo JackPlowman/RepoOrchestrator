@@ -1,9 +1,9 @@
 resource "github_repository" "test-project-status-checker" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "test-project-status-checker"
-  description  = "A repository to test Project Status Checker"
-  visibility   = "public"
+  name        = "test-project-status-checker"
+  description = "A repository to test Project Status Checker"
+  visibility  = "public"
 
   # Pull Request settings
   allow_auto_merge            = true
