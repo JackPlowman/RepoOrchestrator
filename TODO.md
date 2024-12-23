@@ -3,7 +3,6 @@
 ## Add Repositories
 
 - test-project-status-checker
-- development-ideas
 - github-pr-analyser
 - github-stats
 - pr-proofreader
@@ -25,3 +24,8 @@
 - Turn on GitHub Pages (if applicable)
 - Turn on secret scanning
 - Turn off discussions
+
+## Other
+
+- Add a README.md
+- Test terraform configuration
