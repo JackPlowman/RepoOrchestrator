@@ -2,13 +2,8 @@ resource "github_repository" "create-repository-tasks" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name         = "create-repository-tasks"
-  description  = ""
+  description  = "A list of tasks to complete when setting up a new repository"
   visibility   = "public"
-  homepage_url = "https://jackplowman.github.io/create-repository-tasks/"
-
-  # Repository Features
-  has_issues   = true
-  has_projects = true
 
   # Pull Request settings
   allow_auto_merge            = true
@@ -22,13 +17,4 @@ resource "github_repository" "create-repository-tasks" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
-
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
 }
