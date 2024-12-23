@@ -2,8 +2,12 @@ resource "github_repository" "depup" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "depup"
-  description = "My Profile"
+  description = "CLI tool to upgrade Python Poetry and UV Dependencies"
   visibility  = "public"
+
+  # Repository Features
+  has_issues = true
+  has_projects = true
 
   # Pull Request settings
   allow_auto_merge            = true
