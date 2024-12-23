@@ -34,7 +34,8 @@
 - color: cd00ff
   name: tofu
   description: Pull requests that update Tofu/Terraform code
-- name: github_actions
+- color: 000000
+  name: github_actions
   description: Pull requests that update GitHub Actions code
 - color: 00ff44
   name: shell
