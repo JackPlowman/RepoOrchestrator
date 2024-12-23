@@ -24,6 +24,7 @@
 - Turn on GitHub Pages (if applicable)
 - Turn on secret scanning
 - Turn off discussions
+- Turn on web_commit_signoff_required
 
 ## Other
 
