@@ -7,7 +7,6 @@
 - github-pr-analyser
 - github-stats
 - pr-proofreader
-- depup
 - github-stats-analyser
 - create-repository-tasks
 - source_scan
