@@ -1,9 +1,9 @@
 resource "github_repository" "create-repository-tasks" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "create-repository-tasks"
-  description  = "A list of tasks to complete when setting up a new repository"
-  visibility   = "public"
+  name        = "create-repository-tasks"
+  description = "A list of tasks to complete when setting up a new repository"
+  visibility  = "public"
 
   # Pull Request settings
   allow_auto_merge            = true
