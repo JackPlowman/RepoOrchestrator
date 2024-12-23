@@ -1,9 +1,9 @@
 resource "github_repository" "development-environment" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "development-environment"
-  description  = "My dotfiles for MacOS"
-  visibility   = "public"
+  name        = "development-environment"
+  description = "My dotfiles for MacOS"
+  visibility  = "public"
 
   # Pull Request settings
   allow_auto_merge            = true
