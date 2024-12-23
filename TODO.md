@@ -5,7 +5,6 @@
 - test-project-status-checker
 - pr-proofreader
 - github-stats-analyser
-- create-repository-tasks
 - aws-timing-scripts
 
 ## Set attributes
