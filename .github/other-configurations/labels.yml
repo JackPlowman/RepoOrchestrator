@@ -47,9 +47,6 @@
 - color: ff0073
   name: git_hooks
   description: Pull requests that update git hooks
-- color: f27100
-  name: checker
-  description: Pull requests that update checker code
 # Sizes
 - color: 00ff22
   name: size/XS
