@@ -1,6 +1,6 @@
-#checkov:skip=CKV_GIT_1
-#checkov:skip=CKV_GIT_2
 resource "github_repository" "JackPlowman" {
+  #checkov:skip=CKV_GIT_1
+  #checkov:skip=CKV_GIT_2
   name        = "JackPlowman"
   description = "My Profile"
   visibility  = "public"
