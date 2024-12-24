@@ -6,6 +6,10 @@
 tofu-init:
     cd stack && tofu init
 
+# Plan the tofu stack
+tofu-plan:
+    cd stack && tofu plan
+
 # Apply the tofu stack
 tofu-apply:
     cd stack && tofu apply
