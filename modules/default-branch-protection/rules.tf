@@ -1,7 +1,7 @@
 resource "github_repository_ruleset" "default_ruleset" {
-  name       = "Protect default branch"
-  repository = var.repository_name
-  target     = "branch"
+  name        = "Protect default branch"
+  repository  = var.repository_name
+  target      = "branch"
   enforcement = "active"
 
   conditions {
