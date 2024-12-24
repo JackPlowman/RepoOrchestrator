@@ -22,3 +22,23 @@ resource "github_repository" "python-practice" {
   has_downloads        = false
   vulnerability_alerts = true
 }
+
+module "python-practice_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.python-practice.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "Check Python Code Format and Quality",
+    "CodeQL Analysis",
+    "Dependency Review",
+    "Label Pull Request",
+    "Run Unit Tests",
+  ]
+  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor"]
+
+  depends_on = [github_repository.python-practice]
+}
