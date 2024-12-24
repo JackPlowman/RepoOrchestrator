@@ -26,8 +26,10 @@ module "RepoOrchestrator_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
     "Check Markdown links",
-    "Label Pull Request"
+    "Dependency Review",
+    "Label Pull Request",
   ]
   required_code_scanning_tools = ["zizmor"]
 
