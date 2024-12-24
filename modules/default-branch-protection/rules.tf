@@ -30,7 +30,7 @@ resource "github_repository_ruleset" "default_ruleset" {
     required_status_checks {
       strict_required_status_checks_policy = true
 
-      dynamic required_check {
+      dynamic "required_check" {
         for_each = var.required_status_checks
         content {
           context        = required_check.value
@@ -40,7 +40,7 @@ resource "github_repository_ruleset" "default_ruleset" {
     }
 
     required_code_scanning {
-      dynamic required_code_scanning_tool {
+      dynamic "required_code_scanning_tool" {
         for_each = var.required_code_scanning_tools
         content {
           tool                      = required_code_scanning_tool.value
