@@ -17,6 +17,7 @@ resource "github_repository" "development-environment" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
+  web_commit_signoff_required = true
 }
 
 module "development-environment_default_branch_protection" {

@@ -21,6 +21,7 @@ resource "github_repository" "project-status-checker" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
+  web_commit_signoff_required = true
 }
 
 module "project-status-checker_default_branch_protection" {

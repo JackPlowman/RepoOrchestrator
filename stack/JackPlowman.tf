@@ -17,4 +17,5 @@ resource "github_repository" "JackPlowman" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
+  web_commit_signoff_required = true
 }

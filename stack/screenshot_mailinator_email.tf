@@ -20,6 +20,7 @@ resource "github_repository" "screenshot_mailinator_email" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
+  web_commit_signoff_required = true
 }
 
 module "screenshot_mailinator_email_default_branch_protection" {

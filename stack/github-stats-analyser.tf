@@ -21,6 +21,7 @@ resource "github_repository" "github-stats-analyser" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
+  web_commit_signoff_required = true
 }
 
 module "github-stats-analyser_default_branch_protection" {

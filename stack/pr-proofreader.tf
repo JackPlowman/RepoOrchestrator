@@ -21,6 +21,7 @@ resource "github_repository" "pr-proofreader" {
   # Other settings
   has_downloads        = false
   vulnerability_alerts = true
+  web_commit_signoff_required = true
 }
 
 module "pr-proofreader_default_branch_protection" {
