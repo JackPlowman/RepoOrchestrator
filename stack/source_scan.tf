@@ -50,7 +50,7 @@ module "source_scan_default_branch_protection" {
     "Label Pull Request",
     "Run CodeLimit",
     "Run Unit Tests",
-    "Upload Python Ruff Scanner Results",
+    "Upload Ruff Analysis Results",
   ]
   required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor"]
 
