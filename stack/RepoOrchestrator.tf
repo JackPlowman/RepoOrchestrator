@@ -15,8 +15,9 @@ resource "github_repository" "RepoOrchestrator" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  has_downloads        = false
-  vulnerability_alerts = true
+  has_downloads               = false
+  vulnerability_alerts        = true
+  web_commit_signoff_required = true
 }
 
 module "RepoOrchestrator_default_branch_protection" {

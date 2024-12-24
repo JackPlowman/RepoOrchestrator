@@ -15,6 +15,7 @@ resource "github_repository" "JackPlowman" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  has_downloads        = false
-  vulnerability_alerts = true
+  has_downloads               = false
+  vulnerability_alerts        = true
+  web_commit_signoff_required = true
 }

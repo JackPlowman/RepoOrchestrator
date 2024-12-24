@@ -15,8 +15,9 @@ resource "github_repository" "RepoSync" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  has_downloads        = false
-  vulnerability_alerts = true
+  has_downloads               = false
+  vulnerability_alerts        = true
+  web_commit_signoff_required = true
 }
 
 module "RepoSync_default_branch_protection" {
