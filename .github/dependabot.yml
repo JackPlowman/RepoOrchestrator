@@ -20,7 +20,8 @@ updates:
 
   - package-ecosystem: "terraform"
     directories:
-      - "/"
+      - "/stack"
+      - "/modules/default-branch-protection"
     schedule:
       interval: "weekly"
       day: "saturday"
