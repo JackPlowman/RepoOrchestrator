@@ -14,7 +14,6 @@ tofu-fmt:
     cd stack && tofu fmt
     cd modules/default-branch-protection && tofu fmt
 
-
 # ------------------------------------------------------------------------------
 # Prettier - File Formatting
 # ------------------------------------------------------------------------------
@@ -38,4 +37,3 @@ format:
 # Check for Just format issues
 format-check:
     just --fmt --check --unstable
-
