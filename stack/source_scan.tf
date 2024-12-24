@@ -32,3 +32,27 @@ resource "github_repository" "source_scan" {
     }
   }
 }
+
+module "source_scan_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.source_scan.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "Check Pull Request Title",
+    "Check Python Code Format and Quality",
+    "CodeQL Analysis",
+    "Dependency Review",
+    "Label Pull Request",
+    "Run CodeLimit",
+    "Run Unit Tests",
+    "Upload Python Ruff Scanner Results",
+  ]
+  required_code_scanning_tools = ["CodeQL","SonarCloud","Ruff","zizmor"]
+
+  depends_on = [github_repository.source_scan]
+}
+
