@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "local" {
-    path = "../RepoOrchestratorState/terraform.tfstate"
+    path = "../../RepoOrchestratorState/terraform.tfstate"
   }
 }
 
