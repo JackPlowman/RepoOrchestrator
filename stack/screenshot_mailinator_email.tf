@@ -39,7 +39,7 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "Run Unit Tests",
     "Upload Python Ruff Scanner Results",
   ]
-  required_code_scanning_tools = ["CodeQL","SonarCloud","Ruff","zizmor"]
+  required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor"]
 
   depends_on = [github_repository.screenshot_mailinator_email]
 }

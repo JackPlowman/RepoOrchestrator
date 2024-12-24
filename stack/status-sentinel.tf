@@ -48,7 +48,7 @@ module "status-sentinel_default_branch_protection" {
     "Label Pull Request",
     "Run CodeLimit",
   ]
-  required_code_scanning_tools = ["CodeQL","zizmor"]
+  required_code_scanning_tools = ["CodeQL", "zizmor"]
 
   depends_on = [github_repository.status-sentinel]
 }
