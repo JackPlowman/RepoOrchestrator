@@ -32,3 +32,20 @@ resource "github_repository" "tech-radar" {
     }
   }
 }
+
+module "tech-radar_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.tech-radar.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "Dependency Review",
+    "Label Pull Request",
+  ]
+  required_code_scanning_tools = ["CodeQL", "SonarCloud", "zizmor"]
+
+  depends_on = [github_repository.tech-radar]
+}
