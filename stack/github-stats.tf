@@ -32,3 +32,31 @@ resource "github_repository" "github-stats" {
     }
   }
 }
+
+module "github-stats_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.github-stats.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Markdown links",
+    "Check Pull Request Title",
+    "Check Tests Code Format and Quality",
+    "Check TypeScript Code Format and Quality",
+    "CodeQL Analysis (javascript)",
+    "CodeQL Analysis (python)",
+    "Dependency Review",
+    "Docker Build Test",
+    "Label Pull Request",
+    "Run CodeLimit",
+    "Test GitHub Summary",
+    "Test TypeScript Code",
+    "Upload ESLint Analysis Results",
+    "Upload Ruff Analysis Results",
+    "Validate Schema",
+  ]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint"]
+
+  depends_on = [github_repository.github-stats]
+}
