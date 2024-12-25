@@ -45,7 +45,7 @@ module "github-stats-analyser_default_branch_protection" {
     "Upload Ruff Analysis Results",
     "Validate Schema",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud"]
 
   depends_on = [github_repository.github-stats-analyser]
 }
