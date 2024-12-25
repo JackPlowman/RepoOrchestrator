@@ -51,13 +51,11 @@ module "github-stats_default_branch_protection" {
     "Docker Build Test",
     "Label Pull Request",
     "Run CodeLimit",
-    "Test GitHub Summary",
     "Test TypeScript Code",
     "Upload ESLint Analysis Results",
     "Upload Ruff Analysis Results",
-    "Validate Schema",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint", "SonarCloud"]
 
   depends_on = [github_repository.github-stats]
 }
