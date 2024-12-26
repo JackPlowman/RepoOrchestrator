@@ -1,9 +1,9 @@
 resource "github_repository" "pls" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name         = "pls"
-  description  = ""
-  visibility   = "public"
+  name        = "pls"
+  description = ""
+  visibility  = "public"
 
   # Repository Features
   has_issues   = true
