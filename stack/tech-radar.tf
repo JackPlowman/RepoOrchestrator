@@ -47,7 +47,7 @@ module "tech-radar_default_branch_protection" {
     "Label Pull Request",
     "SonarCloud Scan",
   ]
-  required_code_scanning_tools = ["CodeQL", "SonarCloud", "zizmor"]
+  required_code_scanning_tools = ["SonarCloud", "zizmor"]
 
   depends_on = [github_repository.tech-radar]
 }
