@@ -38,7 +38,7 @@ module "python-practice_default_branch_protection" {
     "Label Pull Request",
     "Run Unit Tests",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor"]
+  required_code_scanning_tools = ["CodeQL", "Ruff"]
 
   depends_on = [github_repository.python-practice]
 }
