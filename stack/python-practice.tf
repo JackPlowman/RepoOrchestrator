@@ -30,7 +30,6 @@ module "python-practice_default_branch_protection" {
   repository_name = github_repository.python-practice.name
   required_status_checks = [
     "Check Code Quality",
-    "Check GitHub Actions with zizmor",
     "Check Justfile Format",
     "Check Markdown links",
     "Check Python Code Format and Quality",
