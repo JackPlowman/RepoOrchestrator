@@ -39,7 +39,6 @@ module "development-ideas_default_branch_protection" {
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
     "Dependency Review",
-    "Label Pull Request",
   ]
   required_code_scanning_tools = ["zizmor"]
 
