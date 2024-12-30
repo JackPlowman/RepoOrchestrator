@@ -18,6 +18,16 @@ resource "github_repository" "create-repository-tasks" {
   has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
+
+  # Security settings
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
 }
 
 module "create-repository-tasks_default_branch_protection" {

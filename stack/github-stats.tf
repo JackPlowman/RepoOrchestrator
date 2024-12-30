@@ -24,6 +24,16 @@ resource "github_repository" "github-stats" {
   vulnerability_alerts        = true
   web_commit_signoff_required = true
 
+  # Security settings
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
+
   # GitHub Pages settings
   pages {
     build_type = "workflow"

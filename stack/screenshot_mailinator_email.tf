@@ -21,6 +21,16 @@ resource "github_repository" "screenshot_mailinator_email" {
   has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
+
+  # Security settings
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
 }
 
 module "screenshot_mailinator_email_default_branch_protection" {
