@@ -1,4 +1,5 @@
 resource "github_repository" "aws-timing-scripts" {
+  #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "aws-timing-scripts"
   description = ""
