@@ -22,6 +22,16 @@ resource "github_repository" "python-practice" {
   has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
+
+  # Security settings
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
 }
 
 module "python-practice_default_branch_protection" {
