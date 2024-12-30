@@ -2,7 +2,7 @@ resource "github_repository" "aws-timing-scripts" {
   #checkov:skip=CKV2_GIT_1
   name        = "aws-timing-scripts"
   description = ""
-  visibility  = "private"
+  visibility  = "public"
 
   # Pull Request settings
   # allow_auto_merge            = true # Disabled for now as repository is private
@@ -17,4 +17,14 @@ resource "github_repository" "aws-timing-scripts" {
   has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
+
+  # Security settings
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
 }
