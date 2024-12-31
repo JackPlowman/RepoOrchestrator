@@ -2,7 +2,7 @@ resource "github_repository" "RepoOrchestrator" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "RepoOrchestrator"
-  description = "Keep all my repositories in sync."
+  description = "Keep all my repositories in sync using Infrastructure as Code."
   visibility  = "public"
 
   # Pull Request settings
