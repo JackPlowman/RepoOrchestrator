@@ -2,7 +2,7 @@ resource "github_repository" "GitHubPulse" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "GitHubPulse"
-  description = ""
+  description = "A RSS feed reader for GitHub Blog"
   visibility  = "public"
 
   # Repository Features
