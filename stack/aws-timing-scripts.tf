@@ -6,7 +6,7 @@ resource "github_repository" "aws-timing-scripts" {
   visibility  = "public"
 
   # Pull Request settings
-  # allow_auto_merge            = true # Disabled for now as repository is private
+  allow_auto_merge            = true
   allow_merge_commit          = false
   allow_rebase_merge          = false
   allow_update_branch         = true
@@ -42,7 +42,7 @@ module "aws-timing-scripts_default_branch_protection" {
     "Dependency Review",
     "Label Pull Request",
     "Run CodeLimit",
-    "Upload Ruff Analysis Results",
+    "Run Python Code Checks",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff"]
 
