@@ -2,7 +2,7 @@ resource "github_repository" "source_scan" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name         = "source_scan"
-  description  = ""
+  description  = "A tool to count technologies and frameworks used in my repositories"
   visibility   = "public"
   homepage_url = "https://jackplowman.github.io/source_scan/"
 

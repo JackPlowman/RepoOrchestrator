@@ -2,7 +2,7 @@ resource "github_repository" "useful-commands" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "useful-commands"
-  description = ""
+  description = "A collection of my useful commands"
   visibility  = "public"
 
   # Repository Features

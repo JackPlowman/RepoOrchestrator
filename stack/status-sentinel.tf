@@ -2,7 +2,7 @@ resource "github_repository" "status-sentinel" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name         = "status-sentinel"
-  description  = ""
+  description  = "A tool to monitor the status of project websites"
   visibility   = "public"
   homepage_url = "https://jackplowman.github.io/status-sentinel/"
 

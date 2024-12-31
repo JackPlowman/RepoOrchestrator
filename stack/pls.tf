@@ -2,7 +2,7 @@ resource "github_repository" "pls" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "pls"
-  description = ""
+  description = "pls (Project Listing System) is a cli tool to change projects"
   visibility  = "public"
 
   # Repository Features
