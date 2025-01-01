@@ -44,15 +44,14 @@ module "github-stats-analyser_default_branch_protection" {
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
     "Check Pull Request Title",
-    "Check Python Code Format and Quality",
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
     "Run CodeLimit",
     "Run Local Action",
+    "Run Python Code Checks",
     "Run Unit Tests",
     "Test GitHub Summary",
-    "Upload Ruff Analysis Results",
     "Validate Schema",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud"]
