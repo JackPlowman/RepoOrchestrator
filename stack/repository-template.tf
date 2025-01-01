@@ -15,7 +15,7 @@ resource "github_repository" "repository-template" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  is_template = true
+  is_template                 = true
   has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
