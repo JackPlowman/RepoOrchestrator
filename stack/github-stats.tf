@@ -53,17 +53,15 @@ module "github-stats_default_branch_protection" {
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
     "Check Pull Request Title",
-    "Check Tests Code Format and Quality",
-    "Check TypeScript Code Format and Quality",
     "CodeQL Analysis (javascript)",
     "CodeQL Analysis (python)",
     "Dependency Review",
     "Docker Build Test",
     "Label Pull Request",
     "Run CodeLimit",
+    "Run Python Code Checks",
+    "Run TypeScript Code Checks",
     "Test TypeScript Code",
-    "Upload ESLint Analysis Results",
-    "Upload Ruff Analysis Results",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint", "SonarCloud"]
 
