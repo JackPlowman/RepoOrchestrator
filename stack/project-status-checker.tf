@@ -54,9 +54,8 @@ module "project-status-checker_default_branch_protection" {
     "Run Local Project Status Checker Action",
     "Run Unit Tests",
     "Test GitHub Summary",
-    "Upload Python Ruff Scanner Results",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor"]
+  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor", "SonarCloud"]
 
   depends_on = [github_repository.project-status-checker]
 }
