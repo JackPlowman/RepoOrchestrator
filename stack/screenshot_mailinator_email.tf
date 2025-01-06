@@ -42,13 +42,12 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "Check GitHub Actions with zizmor",
     "Check Justfile Format",
     "Check Markdown links",
-    "Check Python Code Format and Quality",
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
-    "Run Code Limit",
+    "Run CodeLimit",
+    "Run Python Code Checks",
     "Run Unit Tests",
-    "Upload Python Ruff Scanner Results",
   ]
   required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor"]
 
