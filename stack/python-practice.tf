@@ -40,15 +40,16 @@ module "python-practice_default_branch_protection" {
   repository_name = github_repository.python-practice.name
   required_status_checks = [
     "Check Code Quality",
+    "Check GitHub Actions with zizmor",
     "Check Justfile Format",
     "Check Markdown links",
-    "Check Python Code Format and Quality",
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
+    "Run Python Code Checks",
     "Run Unit Tests",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff"]
+  required_code_scanning_tools = ["CodeQL", "Ruff", "SonarCloud", "zizmor"]
 
   depends_on = [github_repository.python-practice]
 }
