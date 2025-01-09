@@ -54,13 +54,12 @@ module "source_scan_default_branch_protection" {
     "Check Justfile Format",
     "Check Markdown links",
     "Check Pull Request Title",
-    "Check Python Code Format and Quality",
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
     "Run CodeLimit",
+    "Run Python Code Checks",
     "Run Unit Tests",
-    "Upload Ruff Analysis Results",
   ]
   required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor"]
 
