@@ -42,3 +42,25 @@ resource "github_repository" "repo-overseer" {
     }
   }
 }
+
+module "repo-overseer_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.repo-overseer.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "Check Pull Request Title",
+    "Run TypeScript Code Checks",
+    "CodeQL Analysis (python)",
+    "CodeQL Analysis (javascript)",
+    "Dependency Review",
+    "Label Pull Request",
+    "Run Python Code Checks",
+  ]
+  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor"]
+
+  depends_on = [github_repository.repo-overseer]
+}
