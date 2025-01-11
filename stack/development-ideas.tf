@@ -48,9 +48,10 @@ module "development-ideas_default_branch_protection" {
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
+    "CodeQL Analysis",
     "Dependency Review",
   ]
-  required_code_scanning_tools = ["zizmor"]
+  required_code_scanning_tools = ["zizmor", "CodeQL"]
 
   depends_on = [github_repository.development-ideas]
 }
