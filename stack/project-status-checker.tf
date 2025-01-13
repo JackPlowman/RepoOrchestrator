@@ -45,7 +45,6 @@ module "project-status-checker_default_branch_protection" {
     "Check Justfile Format",
     "Check Markdown links",
     "Check Pull Request Title",
-    "Check Pull Request Title",
     "Check Python Code Format and Quality",
     "CodeQL Analysis",
     "Dependency Review",
