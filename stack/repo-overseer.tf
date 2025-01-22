@@ -1,9 +1,9 @@
 resource "github_repository" "repo-overseer" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name        = "repo-overseer"
-  description = "A dashboard for reviewing all my repository settings"
-  visibility  = "public"
+  name         = "repo-overseer"
+  description  = "A dashboard for reviewing all my repository settings"
+  visibility   = "public"
   homepage_url = "https://jackplowman.github.io/repo-overseer"
 
   # Repository Features
