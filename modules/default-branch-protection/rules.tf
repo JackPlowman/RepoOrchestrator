@@ -11,6 +11,14 @@ resource "github_repository_ruleset" "default_ruleset" {
     }
   }
 
+  bypass_actors {
+
+    actor_id    = 1
+    actor_type  = "OrganizationAdmin"
+    bypass_mode = "pull_request"
+
+  }
+
   rules {
     creation                = false
     update                  = false
