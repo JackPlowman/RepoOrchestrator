@@ -4,6 +4,7 @@ resource "github_repository" "repo-overseer" {
   name        = "repo-overseer"
   description = "A dashboard for reviewing all my repository settings"
   visibility  = "public"
+  homepage_url = "https://jackplowman.github.io/repo-overseer"
 
   # Repository Features
   has_issues   = true
