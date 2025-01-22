@@ -13,8 +13,8 @@ resource "github_repository_ruleset" "default_ruleset" {
 
   bypass_actors {
 
-    actor_id    = 1
-    actor_type  = "OrganizationAdmin"
+    actor_id    = 5
+    actor_type  = "RepositoryRole"
     bypass_mode = "pull_request"
 
   }
