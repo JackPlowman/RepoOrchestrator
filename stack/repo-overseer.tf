@@ -54,13 +54,14 @@ module "repo-overseer_default_branch_protection" {
     "Check Justfile Format",
     "Check Markdown links",
     "Check Pull Request Title",
-    "Run TypeScript Code Checks",
     "CodeQL Analysis (actions)",
     "CodeQL Analysis (python)",
     "CodeQL Analysis (typescript)",
     "Dependency Review",
     "Label Pull Request",
+    "Run CodeLimit",
     "Run Python Code Checks",
+    "Run TypeScript Code Checks",
   ]
   required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor"]
 
