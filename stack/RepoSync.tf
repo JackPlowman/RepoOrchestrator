@@ -37,6 +37,7 @@ module "RepoSync_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
+    "Check Markdown links",
     "CodeQL Analysis",
     "Label Pull Request",
   ]
