@@ -29,3 +29,8 @@ resource "github_repository" "JackPlowman" {
     }
   }
 }
+
+resource "github_repository_dependabot_security_updates" "JackPlowman" {
+  repository = github_repository.JackPlowman.name
+  enabled    = true
+}

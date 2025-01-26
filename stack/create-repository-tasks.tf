@@ -30,6 +30,11 @@ resource "github_repository" "create-repository-tasks" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "create-repository-tasks" {
+  repository = github_repository.create-repository-tasks.name
+  enabled    = true
+}
+
 module "create-repository-tasks_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

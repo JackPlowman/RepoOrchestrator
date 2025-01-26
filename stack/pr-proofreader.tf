@@ -34,6 +34,11 @@ resource "github_repository" "pr-proofreader" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "pr-proofreader" {
+  repository = github_repository.pr-proofreader.name
+  enabled    = true
+}
+
 module "pr-proofreader_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

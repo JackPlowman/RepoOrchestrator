@@ -44,6 +44,11 @@ resource "github_repository" "source_scan" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "source_scan" {
+  repository = github_repository.source_scan.name
+  enabled    = true
+}
+
 module "source_scan_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

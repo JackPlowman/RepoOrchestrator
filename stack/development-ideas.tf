@@ -40,6 +40,11 @@ resource "github_repository" "development-ideas" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "development-ideas" {
+  repository = github_repository.development-ideas.name
+  enabled    = true
+}
+
 module "development-ideas_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

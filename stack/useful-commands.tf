@@ -40,3 +40,8 @@ module "useful-commands_default_branch_protection" {
 
   depends_on = [github_repository.useful-commands]
 }
+
+resource "github_repository_dependabot_security_updates" "useful-commands" {
+  repository = github_repository.useful-commands.name
+  enabled    = true
+}

@@ -34,6 +34,11 @@ resource "github_repository" "python-practice" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "python-practice" {
+  repository = github_repository.python-practice.name
+  enabled    = true
+}
+
 module "python-practice_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

@@ -44,6 +44,11 @@ resource "github_repository" "tech-radar" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "tech-radar" {
+  repository = github_repository.tech-radar.name
+  enabled    = true
+}
+
 module "tech-radar_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

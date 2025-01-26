@@ -34,6 +34,11 @@ resource "github_repository" "repo_standards_validator" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "repo_standards_validator" {
+  repository = github_repository.repo_standards_validator.name
+  enabled    = true
+}
+
 module "repo_standards_validator_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

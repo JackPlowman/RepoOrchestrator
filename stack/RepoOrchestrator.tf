@@ -30,6 +30,11 @@ resource "github_repository" "RepoOrchestrator" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "RepoOrchestrator" {
+  repository = github_repository.RepoOrchestrator.name
+  enabled    = true
+}
+
 module "RepoOrchestrator_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

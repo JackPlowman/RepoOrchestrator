@@ -44,6 +44,11 @@ resource "github_repository" "repo-overseer" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "repo-overseer" {
+  repository = github_repository.repo-overseer.name
+  enabled    = true
+}
+
 module "repo-overseer_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

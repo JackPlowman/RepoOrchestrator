@@ -17,3 +17,8 @@ resource "github_repository" "RepoOrchestratorState" {
   vulnerability_alerts        = true
   web_commit_signoff_required = true
 }
+
+resource "github_repository_dependabot_security_updates" "RepoOrchestratorState" {
+  repository = github_repository.RepoOrchestratorState.name
+  enabled    = true
+}

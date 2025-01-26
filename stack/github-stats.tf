@@ -44,6 +44,11 @@ resource "github_repository" "github-stats" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "github-stats" {
+  repository = github_repository.github-stats.name
+  enabled    = true
+}
+
 module "github-stats_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

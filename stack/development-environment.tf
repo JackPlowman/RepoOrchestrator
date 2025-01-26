@@ -30,6 +30,11 @@ resource "github_repository" "development-environment" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "development-environment" {
+  repository = github_repository.development-environment.name
+  enabled    = true
+}
+
 module "development-environment_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

@@ -44,6 +44,11 @@ resource "github_repository" "status-sentinel" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "status-sentinel" {
+  repository = github_repository.status-sentinel.name
+  enabled    = true
+}
+
 module "status-sentinel_default_branch_protection" {
   source = "../modules/default-branch-protection"
 
