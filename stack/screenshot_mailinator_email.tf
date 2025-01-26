@@ -33,6 +33,11 @@ resource "github_repository" "screenshot_mailinator_email" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "screenshot_mailinator_email" {
+  repository = github_repository.screenshot_mailinator_email.name
+  enabled    = true
+}
+
 module "screenshot_mailinator_email_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

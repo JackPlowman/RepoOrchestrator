@@ -34,6 +34,11 @@ resource "github_repository" "GitHubPulse" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "GitHubPulse" {
+  repository = github_repository.GitHubPulse.name
+  enabled    = true
+}
+
 module "GitHubPulse_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

@@ -30,6 +30,11 @@ resource "github_repository" "RepoSync" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "RepoSync" {
+  repository = github_repository.RepoSync.name
+  enabled    = true
+}
+
 module "RepoSync_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

@@ -34,6 +34,11 @@ resource "github_repository" "depup" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "depup" {
+  repository = github_repository.depup.name
+  enabled    = true
+}
+
 module "depup_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

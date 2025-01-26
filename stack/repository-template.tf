@@ -31,6 +31,11 @@ resource "github_repository" "repository-template" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "repository-template" {
+  repository = github_repository.repository-template.name
+  enabled    = true
+}
+
 module "repository-template_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

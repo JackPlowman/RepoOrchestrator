@@ -34,6 +34,11 @@ resource "github_repository" "github-pr-analyser" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "github-pr-analyser" {
+  repository = github_repository.github-pr-analyser.name
+  enabled    = true
+}
+
 module "github-pr-analyser_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

@@ -30,6 +30,11 @@ resource "github_repository" "aws-timing-scripts" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "aws-timing-scripts" {
+  repository = github_repository.aws-timing-scripts.name
+  enabled    = true
+}
+
 module "aws-timing-scripts_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

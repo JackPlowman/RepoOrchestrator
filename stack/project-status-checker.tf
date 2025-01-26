@@ -34,6 +34,11 @@ resource "github_repository" "project-status-checker" {
   }
 }
 
+resource "github_repository_dependabot_security_updates" "project-status-checker" {
+  repository = github_repository.project-status-checker.name
+  enabled    = true
+}
+
 module "project-status-checker_default_branch_protection" {
   source = "../modules/default-branch-protection"
 

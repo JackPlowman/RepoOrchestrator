@@ -29,3 +29,8 @@ resource "github_repository" "test-project-status-checker" {
     }
   }
 }
+
+resource "github_repository_dependabot_security_updates" "test-project-status-checker" {
+  repository = github_repository.test-project-status-checker.name
+  enabled    = true
+}
