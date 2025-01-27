@@ -29,6 +29,12 @@ resource "github_repository" "repository-visualiser" {
       status = "enabled"
     }
   }
+
+  template {
+    include_all_branches = false
+    owner                = "JackPlowman"
+    repository           = "repository-template"
+  }
 }
 
 resource "github_repository_dependabot_security_updates" "repository-visualiser" {
