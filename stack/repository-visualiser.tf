@@ -48,7 +48,7 @@ resource "github_repository_dependabot_security_updates" "repository-visualiser"
 module "repository-visualiser_default_branch_protection" {
   source = "../modules/default-branch-protection"
 
-  repository_name = github_repository.repository-visualiser
+  repository_name = github_repository.repository-visualiser.name
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
