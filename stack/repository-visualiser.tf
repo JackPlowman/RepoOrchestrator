@@ -5,6 +5,10 @@ resource "github_repository" "repository-visualiser" {
   description = ""
   visibility  = "public"
 
+  # Repository Features
+  has_issues   = true
+  has_projects = true
+
   # Pull Request settings
   allow_auto_merge            = true
   allow_merge_commit          = false
@@ -15,7 +19,6 @@ resource "github_repository" "repository-visualiser" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  is_template                 = true
   has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
@@ -40,4 +43,21 @@ resource "github_repository" "repository-visualiser" {
 resource "github_repository_dependabot_security_updates" "repository-visualiser" {
   repository = github_repository.repository-visualiser.name
   enabled    = true
+}
+
+module "repository-visualiser_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.repository-visualiser
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Markdown links",
+    "CodeQL Analysis",
+    "Dependency Review",
+    "Label Pull Request",
+  ]
+  required_code_scanning_tools = ["zizmor", "CodeQL"]
+
+  depends_on = [github_repository.repository-template]
 }
