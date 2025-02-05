@@ -1,8 +1,8 @@
-resource "github_repository" "python-practice" {
+resource "github_repository" "python-practise" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name        = "python-practice"
-  description = "A repository for storing completed coding challenges, organised for easy reference and future practice."
+  name        = "python-practise"
+  description = "A repository for storing completed coding challenges, organised for easy reference and future practise."
   visibility  = "public"
 
   # Repository Features
@@ -34,15 +34,15 @@ resource "github_repository" "python-practice" {
   }
 }
 
-resource "github_repository_dependabot_security_updates" "python-practice" {
-  repository = github_repository.python-practice.name
+resource "github_repository_dependabot_security_updates" "python-practise" {
+  repository = github_repository.python-practise.name
   enabled    = true
 }
 
-module "python-practice_default_branch_protection" {
+module "python-practise_default_branch_protection" {
   source = "../modules/default-branch-protection"
 
-  repository_name = github_repository.python-practice.name
+  repository_name = github_repository.python-practise.name
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
@@ -57,5 +57,5 @@ module "python-practice_default_branch_protection" {
   ]
   required_code_scanning_tools = ["CodeQL", "Ruff", "SonarCloud", "zizmor"]
 
-  depends_on = [github_repository.python-practice]
+  depends_on = [github_repository.python-practise]
 }
