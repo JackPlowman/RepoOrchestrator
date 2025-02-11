@@ -60,10 +60,12 @@ module "status-sentinel_default_branch_protection" {
     "Check Markdown links",
     "Check Pull Request Title",
     "CodeQL Analysis (actions)",
+    "CodeQL Analysis (python)",
     "CodeQL Analysis (typescript)",
     "Dependency Review",
     "Label Pull Request",
     "Run CodeLimit",
+    "Run Python Code Checks",
   ]
   required_code_scanning_tools = ["CodeQL", "zizmor"]
 
