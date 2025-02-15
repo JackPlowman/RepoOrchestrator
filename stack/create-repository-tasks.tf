@@ -43,6 +43,7 @@ module "create-repository-tasks_default_branch_protection" {
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
+    "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
   ]
