@@ -46,13 +46,14 @@ module "github-pr-analyser_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
-    "Check Markdown links",
-    "Run Unit Tests",
-    "Dependency Review",
     "Check Go Format",
-    "CodeQL Analysis",
-    "Run Go Vulnerability Check",
+    "Check Markdown links",
+    "CodeQL Analysis (actions)",
+    "CodeQL Analysis (go)",
+    "Dependency Review",
     "Label Pull Request",
+    "Run Go Vulnerability Check",
+    "Run Unit Tests",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
