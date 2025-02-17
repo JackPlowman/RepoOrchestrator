@@ -47,6 +47,7 @@ module "GitHubPulse_default_branch_protection" {
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
+    "Check Pull Request Title",
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
