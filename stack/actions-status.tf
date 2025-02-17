@@ -37,3 +37,7 @@ resource "github_repository" "actions-status" {
 }
 
 
+resource "github_repository_dependabot_security_updates" "actions-status" {
+  repository = github_repository.actions-status.name
+  enabled    = true
+}
