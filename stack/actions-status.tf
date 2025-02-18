@@ -5,6 +5,10 @@ resource "github_repository" "actions-status" {
   description = ""
   visibility  = "public"
 
+  # Repository Features
+  has_issues   = true
+  has_projects = true
+
   # Pull Request settings
   allow_auto_merge            = true
   allow_merge_commit          = false
