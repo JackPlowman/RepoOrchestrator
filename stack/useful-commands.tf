@@ -31,6 +31,7 @@ module "useful-commands_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
     "Check Markdown links",
     "CodeQL Analysis",
     "Dependency Review",
