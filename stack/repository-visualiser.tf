@@ -53,7 +53,9 @@ module "repository-visualiser_default_branch_protection" {
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
     "Check Markdown links",
+    "Check Justfile Format",
     "CodeQL Analysis",
+    "Repository Visualiser",
     "Dependency Review",
     "Label Pull Request",
   ]
