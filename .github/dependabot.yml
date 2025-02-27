@@ -5,8 +5,7 @@ updates:
     directories:
       - "/"
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "daily"
       time: "01:00"
       timezone: "Europe/London"
     target-branch: "main"
@@ -23,8 +22,7 @@ updates:
       - "/stack"
       - "/modules/default-branch-protection"
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "daily"
       time: "01:00"
       timezone: "Europe/London"
     target-branch: "main"
