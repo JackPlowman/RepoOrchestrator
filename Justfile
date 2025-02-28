@@ -14,9 +14,13 @@ tofu-plan:
 tofu-apply:
     cd stack && tofu apply
 
+# Format the tofu code
 tofu-fmt:
-    cd stack && tofu fmt
-    cd modules/default-branch-protection && tofu fmt
+    tofu fmt -recursive
+
+# Check the tofu code format
+tofu-fmt-check:
+    tofu fmt -recursive -check
 
 # ------------------------------------------------------------------------------
 # Prettier
