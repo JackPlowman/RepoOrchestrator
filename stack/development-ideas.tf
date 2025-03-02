@@ -56,8 +56,8 @@ module "development-ideas_default_branch_protection" {
     "Check Markdown links",
     "CodeQL Analysis",
     "Dependency Review",
-    "Lefthook Validate",
     "Label Pull Request",
+    "Lefthook Validate",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
