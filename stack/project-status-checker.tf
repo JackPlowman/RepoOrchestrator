@@ -55,6 +55,7 @@ module "project-status-checker_default_branch_protection" {
     "CodeQL Analysis (python)",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
     "Run CodeLimit",
     "Run Local Project Status Checker Action",
     "Run Unit Tests",
