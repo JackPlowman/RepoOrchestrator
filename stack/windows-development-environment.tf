@@ -25,3 +25,8 @@ resource "github_repository" "windows-development-environment" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "windows-development-environment" {
+  repository = github_repository.windows-development-environment.name
+  enabled    = true
+}
