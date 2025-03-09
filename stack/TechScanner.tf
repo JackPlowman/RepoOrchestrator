@@ -39,3 +39,8 @@ resource "github_repository" "TechScanner" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "TechScanner" {
+  repository = github_repository.TechScanner.name
+  enabled    = true
+}
