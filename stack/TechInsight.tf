@@ -39,3 +39,8 @@ resource "github_repository" "TechInsight" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "TechInsight" {
+  repository = github_repository.TechInsight.name
+  enabled    = true
+}
