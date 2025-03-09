@@ -65,6 +65,7 @@ module "github-stats_default_branch_protection" {
     "Dependency Review",
     "Docker Build Test",
     "Label Pull Request",
+    "Lefthook Validate",
     "Run CodeLimit",
     "Run Python Code Checks",
     "Run TypeScript Code Checks",
