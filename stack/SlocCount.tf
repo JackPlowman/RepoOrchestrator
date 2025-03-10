@@ -32,4 +32,10 @@ resource "github_repository" "SlocCount" {
       status = "enabled"
     }
   }
+
+  template {
+    include_all_branches = false
+    owner                = "JackPlowman"
+    repository           = "repository-template"
+  }
 }
