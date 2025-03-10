@@ -39,3 +39,22 @@ resource "github_repository" "SlocCount" {
     repository           = "repository-template"
   }
 }
+
+module "SlocCount_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.SlocCount.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "CodeQL Analysis",
+    "Dependency Review",
+    "Label Pull Request",
+    "Lefthook Validate",
+  ]
+  required_code_scanning_tools = ["CodeQL", "zizmor"]
+
+  depends_on = [github_repository.SlocCount]
+}
