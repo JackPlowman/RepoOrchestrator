@@ -49,12 +49,15 @@ module "SlocCount_default_branch_protection" {
     "Check GitHub Actions with zizmor",
     "Check Justfile Format",
     "Check Markdown links",
-    "CodeQL Analysis",
+    "CodeQL Analysis (actions)",
+    "CodeQL Analysis (python)",
     "Dependency Review",
     "Label Pull Request",
     "Lefthook Validate",
+    "Run Diagrams Python Code Checks",
+    "Run Scanner Python Code Checks",
   ]
-  required_code_scanning_tools = ["CodeQL", "zizmor"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud"]
 
   depends_on = [github_repository.SlocCount]
 }
