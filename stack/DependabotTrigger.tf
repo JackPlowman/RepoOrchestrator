@@ -45,3 +45,22 @@ resource "github_repository_dependabot_security_updates" "DependabotTrigger" {
   repository = github_repository.DependabotTrigger.name
   enabled    = true
 }
+
+module "DependabotTrigger_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.DependabotTrigger.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "CodeQL Analysis",
+    "Dependency Review",
+    "Label Pull Request",
+    "Lefthook Validate",
+  ]
+  required_code_scanning_tools = ["zizmor", "CodeQL"]
+
+  depends_on = [github_repository.DependabotTrigger]
+}
