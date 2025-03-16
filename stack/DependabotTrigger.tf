@@ -40,3 +40,8 @@ resource "github_repository" "DependabotTrigger" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "DependabotTrigger" {
+  repository = github_repository.DependabotTrigger.name
+  enabled    = true
+}
