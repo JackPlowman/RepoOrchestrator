@@ -48,6 +48,7 @@ module "aws-timing-scripts_default_branch_protection" {
     "CodeQL Analysis (python)",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
     "Run CodeLimit",
     "Run Python Code Checks",
   ]
