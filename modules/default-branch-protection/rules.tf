@@ -51,7 +51,7 @@ resource "github_repository_ruleset" "default_ruleset" {
         content {
           tool                      = required_code_scanning_tool.value
           alerts_threshold          = "all"
-          security_alerts_threshold = "critical"
+          security_alerts_threshold = "high"
         }
       }
     }
