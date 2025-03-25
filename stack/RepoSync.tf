@@ -46,6 +46,7 @@ module "RepoSync_default_branch_protection" {
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
