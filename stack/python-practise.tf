@@ -51,6 +51,7 @@ module "python-practise_default_branch_protection" {
     "CodeQL Analysis (actions)",
     "CodeQL Analysis (python)",
     "Dependency Review",
+    "Lefthook Validate",
     "Label Pull Request",
     "Run Python Code Checks",
     "Run Unit Tests",
