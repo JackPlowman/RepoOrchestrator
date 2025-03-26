@@ -2,7 +2,7 @@ resource "github_repository" "repository-visualiser" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "repository-visualiser"
-  description = ""
+  description = "A tool to visualise the structure of a GitHub repository"
   visibility  = "public"
 
   # Repository Features
