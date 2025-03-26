@@ -52,12 +52,13 @@ module "repository-visualiser_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "Check GitHub Actions with zizmor",
-    "Check Markdown links",
     "Check Justfile Format",
+    "Check Markdown links",
     "CodeQL Analysis",
-    "Repository Visualiser",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
+    "Repository Visualiser",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
