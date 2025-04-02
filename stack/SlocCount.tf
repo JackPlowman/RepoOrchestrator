@@ -2,7 +2,7 @@ resource "github_repository" "SlocCount" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "SlocCount"
-  description = ""
+  description = "A repository to count the lines of code in a project"
   visibility  = "public"
 
   # Repository Features
