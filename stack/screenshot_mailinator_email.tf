@@ -51,6 +51,7 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "CodeQL Analysis (python)",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
     "Run CodeLimit",
     "Run Python Code Checks",
     "Run Unit Tests",
