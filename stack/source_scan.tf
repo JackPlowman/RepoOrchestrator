@@ -63,6 +63,7 @@ module "source_scan_default_branch_protection" {
     "CodeQL Analysis (python)",
     "Dependency Review",
     "Label Pull Request",
+    "Pinact Verify",
     "Run CodeLimit",
     "Run Python Code Checks",
     "Run Unit Tests",
