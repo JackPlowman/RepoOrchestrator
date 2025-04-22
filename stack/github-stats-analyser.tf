@@ -53,6 +53,7 @@ module "github-stats-analyser_default_branch_protection" {
     "CodeQL Analysis (actions)",
     "CodeQL Analysis (python)",
     "Dependency Review",
+    "Pinact Verify",
     "Label Pull Request",
     "Lefthook Validate",
     "Run CodeLimit",
