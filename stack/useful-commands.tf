@@ -36,7 +36,6 @@ module "useful-commands_default_branch_protection" {
     "CodeQL Analysis",
     "Dependency Review",
     "Label Pull Request",
-    "Pinact Verify",
   ]
   required_code_scanning_tools = ["CodeQL", "zizmor"]
 
