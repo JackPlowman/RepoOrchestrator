@@ -55,7 +55,6 @@ module "github-stats-analyser_default_branch_protection" {
     "Dependency Review",
     "Label Pull Request",
     "Lefthook Validate",
-    "Pinact Verify",
     "Run CodeLimit",
     "Run Local Action",
     "Run Python Code Checks",
