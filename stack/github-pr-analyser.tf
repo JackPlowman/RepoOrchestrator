@@ -55,7 +55,6 @@ module "github-pr-analyser_default_branch_protection" {
     "Dependency Review",
     "Label Pull Request",
     "Lefthook Validate",
-    "Pinact Verify",
     "Run Go Vulnerability Check",
     "Run Local Action",
     "Run Unit Tests",
