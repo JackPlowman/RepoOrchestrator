@@ -57,6 +57,7 @@ module "SlocCount_default_branch_protection" {
     "Run CodeLimit",
     "Run Diagrams Python Code Checks",
     "Run Scanner Python Code Checks",
+    "Run Tests Python Code Checks",
     "Run Unit Tests",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud"]
