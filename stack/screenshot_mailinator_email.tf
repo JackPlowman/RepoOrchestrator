@@ -52,7 +52,6 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "Dependency Review",
     "Label Pull Request",
     "Lefthook Validate",
-    "Pinact Verify",
     "Run CodeLimit",
     "Run Python Code Checks",
     "Run Unit Tests",
