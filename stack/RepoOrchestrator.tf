@@ -48,10 +48,8 @@ module "RepoOrchestrator_default_branch_protection" {
     "Dependency Review",
     "Label Pull Request",
     "Lefthook Validate",
-    "Run CodeLimit",
-    "Run Python Code Checks",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff"]
+  required_code_scanning_tools = ["zizmor", "CodeQL"]
 
   depends_on = [github_repository.RepoOrchestrator]
 }
