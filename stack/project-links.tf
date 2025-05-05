@@ -2,7 +2,7 @@ resource "github_repository" "project-links" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name         = "project-links"
-  description  = ""
+  description  = "A collection of links to my projects"
   visibility   = "public"
   homepage_url = "https://jackplowman.github.io/project-links/"
 
