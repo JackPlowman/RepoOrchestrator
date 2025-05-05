@@ -51,3 +51,26 @@ resource "github_repository_dependabot_security_updates" "project-links" {
   repository = github_repository.project-links.name
   enabled    = true
 }
+
+module "project-links_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.project-links.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Justfile Format",
+    "Check Markdown links",
+    "CodeQL Analysis (actions)",
+    "CodeQL Analysis (python)",
+    "CodeQL Analysis (typescript)",
+    "Dependency Review",
+    "Label Pull Request",
+    "Run CodeLimit",
+    "Run Python Test Code Checks",
+    "Run TypeScript Code Checks",
+  ]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint"]
+
+  depends_on = [github_repository.project-links]
+}
