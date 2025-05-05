@@ -46,3 +46,8 @@ resource "github_repository" "project-links" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "project-links" {
+  repository = github_repository.project-links.name
+  enabled    = true
+}
