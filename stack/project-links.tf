@@ -61,7 +61,6 @@ module "project-links_default_branch_protection" {
     "Check GitHub Actions with zizmor",
     "Check Justfile Format",
     "Check Markdown links",
-    "Check Pull Request Title",
     "CodeQL Analysis (actions)",
     "CodeQL Analysis (python)",
     "CodeQL Analysis (typescript)",
