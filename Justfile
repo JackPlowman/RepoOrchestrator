@@ -68,7 +68,7 @@ lefthook-validate:
 
 # Run zizmor checking
 zizmor-check:
-    zizmor .
+    zizmor . --pedantic --persona=pedantic
 
 # ------------------------------------------------------------------------------
 # Pinact
