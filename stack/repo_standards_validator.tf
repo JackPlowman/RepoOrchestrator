@@ -53,6 +53,7 @@ module "repo_standards_validator_default_branch_protection" {
     "CodeQL Analysis (python)",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
     "Run CodeLimit",
     "Run Local Action",
     "Run Python Code Checks",
