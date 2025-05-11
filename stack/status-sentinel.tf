@@ -64,6 +64,7 @@ module "status-sentinel_default_branch_protection" {
     "CodeQL Analysis (typescript)",
     "Dependency Review",
     "Label Pull Request",
+    "Lefthook Validate",
     "Run CodeLimit",
     "Run Python Code Checks",
     "Run TypeScript Code Checks",
