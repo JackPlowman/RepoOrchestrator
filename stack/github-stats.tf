@@ -63,7 +63,6 @@ module "github-stats_default_branch_protection" {
     "CodeQL Analysis (python)",
     "CodeQL Analysis (typescript)",
     "Dependency Review",
-    "Docker Build Test",
     "Label Pull Request",
     "Lefthook Validate",
     "Run CodeLimit",
