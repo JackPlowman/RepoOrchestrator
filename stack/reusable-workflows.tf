@@ -35,3 +35,8 @@ resource "github_repository" "reusable-workflows" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "reusable-workflows" {
+  repository = github_repository.reusable-workflows.name
+  enabled    = true
+}
