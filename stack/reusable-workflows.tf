@@ -40,3 +40,21 @@ resource "github_repository_dependabot_security_updates" "reusable-workflows" {
   repository = github_repository.reusable-workflows.name
   enabled    = true
 }
+
+module "reusable-workflows_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.reusable-workflows.name
+  required_status_checks = [
+    "Check Code Quality",
+    "Check GitHub Actions with zizmor",
+    "Check Markdown links",
+    "CodeQL Analysis",
+    "Dependency Review",
+    "Label Pull Request",
+    "Lefthook Validate",
+  ]
+  required_code_scanning_tools = ["zizmor", "CodeQL"]
+
+  depends_on = [github_repository.reusable-workflows]
+}
