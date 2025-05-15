@@ -47,8 +47,8 @@ module "repository-template_default_branch_protection" {
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
     "Common Code Checks / Lefthook Validate",
-    "Dependency Review",
-    "Label Pull Request",
+    "Common Pull Request Tasks / Dependency Review",
+    "Common Pull Request Tasks / Label Pull Request",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
