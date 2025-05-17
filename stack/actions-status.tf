@@ -52,11 +52,15 @@ module "actions-status_default_branch_protection" {
   repository_name = github_repository.actions-status.name
   required_status_checks = [
     "Check Code Quality",
-    "Check GitHub Actions with zizmor",
-    "Check Justfile Format",
-    "Check Markdown links",
-    "Dependency Review",
-    "Label Pull Request",
+    "Common Code Checks / Check GitHub Actions with zizmor",
+    "Common Code Checks / Check Justfile Format",
+    "Common Code Checks / Check Markdown links",
+    "Common Code Checks / Lefthook Validate",
+    "Common Pull Request Tasks / Dependency Review",
+    "Common Pull Request Tasks / Label Pull Request",
+    "Check Pull Request Title",
+    "CodeQL Analysis (actions)",
+    "CodeQL Analysis (typescript)",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
