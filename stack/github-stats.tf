@@ -2,7 +2,7 @@ resource "github_repository" "github-stats" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name         = "github-stats"
-  description  = "A Website to display my Repository Statistics"
+  description  = "Website to display my Repository Statistics"
   visibility   = "public"
   homepage_url = "https://jackplowman.github.io/github-stats/"
 

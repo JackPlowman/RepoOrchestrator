@@ -2,7 +2,7 @@ resource "github_repository" "projects" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "projects"
-  description = ""
+  description = "A repository to list my projects and their status"
   visibility  = "public"
 
   # Pull Request settings
