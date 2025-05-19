@@ -28,4 +28,15 @@ resource "github_repository" "projects" {
       status = "enabled"
     }
   }
+
+  template {
+    include_all_branches = false
+    owner                = "JackPlowman"
+    repository           = "repository-template"
+  }
+}
+
+resource "github_repository_dependabot_security_updates" "projects" {
+  repository = github_repository.projects.name
+  enabled    = true
 }
