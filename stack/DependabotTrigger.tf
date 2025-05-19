@@ -2,9 +2,8 @@ resource "github_repository" "DependabotTrigger" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "DependabotTrigger"
-  description = ""
+  description = "A script to trigger Dependabot update jobs"
   visibility  = "public"
-
 
   # Repository Features
   has_issues   = true
