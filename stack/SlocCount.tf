@@ -55,7 +55,6 @@ module "SlocCount_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
     "Run CodeLimit",
-    "Run Diagrams Python Code Checks",
     "Run Scanner Python Code Checks",
     "Run Tests Python Code Checks",
     "Run Unit Tests",
