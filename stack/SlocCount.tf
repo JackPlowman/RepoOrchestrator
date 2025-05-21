@@ -48,6 +48,7 @@ module "SlocCount_default_branch_protection" {
     "Check Code Quality",
     "CodeQL Analysis (actions)",
     "CodeQL Analysis (python)",
+    "CodeQL Analysis (typescript)",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
