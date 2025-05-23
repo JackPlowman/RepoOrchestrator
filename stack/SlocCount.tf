@@ -1,9 +1,10 @@
 resource "github_repository" "SlocCount" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name        = "SlocCount"
-  description = "A repository to count the lines of code in a project"
-  visibility  = "public"
+  name         = "SlocCount"
+  description  = "A repository to count the lines of code in a project"
+  visibility   = "public"
+  homepage_url = "https://jackplowman.github.io/SlocCount/"
 
   # Repository Features
   has_issues   = true
@@ -30,6 +31,15 @@ resource "github_repository" "SlocCount" {
     }
     secret_scanning_push_protection {
       status = "enabled"
+    }
+  }
+
+  # GitHub Pages settings
+  pages {
+    build_type = "workflow"
+    source {
+      branch = "main"
+      path   = "/"
     }
   }
 
