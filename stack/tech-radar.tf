@@ -55,7 +55,7 @@ module "tech-radar_default_branch_protection" {
   repository_name = github_repository.tech-radar.name
   required_status_checks = [
     "Check Code Quality",
-    "CodeQL Analysis",
+    "CodeQL Analysis (actions) / Analyse code",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
