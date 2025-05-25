@@ -58,9 +58,9 @@ module "project-links_default_branch_protection" {
   repository_name = github_repository.project-links.name
   required_status_checks = [
     "Check Code Quality",
-    "CodeQL Analysis (actions)",
-    "CodeQL Analysis (python)",
-    "CodeQL Analysis (typescript)",
+    "CodeQL Analysis (actions) / Analyse code",
+    "CodeQL Analysis (python) / Analyse code",
+    "CodeQL Analysis (typescript) / Analyse code",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
