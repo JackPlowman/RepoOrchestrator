@@ -46,8 +46,8 @@ module "repo_standards_validator_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "Check Pull Request Title",
-    "CodeQL Analysis (actions)",
-    "CodeQL Analysis (python)",
+    "CodeQL Analysis (actions) / Analyse code",
+    "CodeQL Analysis (python) / Analyse code",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
