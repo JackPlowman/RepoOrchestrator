@@ -45,8 +45,8 @@ module "python-practise_default_branch_protection" {
   repository_name = github_repository.python-practise.name
   required_status_checks = [
     "Check Code Quality",
-    "CodeQL Analysis (actions)",
-    "CodeQL Analysis (python)",
+    "CodeQL Analysis (actions) / Analyse code",
+    "CodeQL Analysis (python) / Analyse code",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
