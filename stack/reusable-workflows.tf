@@ -2,7 +2,7 @@ resource "github_repository" "reusable-workflows" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "reusable-workflows"
-  description = ""
+  description = "My reusable GitHub Actions workflows"
   visibility  = "public"
 
   # Pull Request settings
