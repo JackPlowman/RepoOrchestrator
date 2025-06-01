@@ -49,3 +49,8 @@ resource "github_repository" "travel-map" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "travel-map" {
+  repository = github_repository.travel-map.name
+  enabled    = true
+}
