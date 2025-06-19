@@ -53,7 +53,10 @@ module "python-practise_default_branch_protection" {
     "Common Code Checks / Lefthook Validate",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
-    "Run Python Code Checks",
+    "Run Python Format Checks",
+    "Run Python Lint Checks",
+    "Run Python Lockfile Check",
+    "Run Python Type Checks",
     "Run Unit Tests",
   ]
   required_code_scanning_tools = ["CodeQL", "Ruff", "SonarCloud", "zizmor"]
