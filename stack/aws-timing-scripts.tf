@@ -50,7 +50,9 @@ module "aws-timing-scripts_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
     "Run CodeLimit",
-    "Run Python Code Checks",
+    "Run Python Dead Code Checks",
+    "Run Python Format Checks",
+    "Run Python Lint Checks",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff"]
 
