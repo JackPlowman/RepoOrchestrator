@@ -66,8 +66,15 @@ module "SlocCount_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
     "Run CodeLimit",
-    "Run Scanner Python Code Checks",
-    "Run Tests Python Code Checks",
+    "Run Python Scanner Dead Code Checks",
+    "Run Python Scanner Format Checks",
+    "Run Python Scanner Lint Checks",
+    "Run Python Scanner Lockfile Check",
+    "Run Python Scanner Type Checks",
+    "Run Python Tests Format Checks",
+    "Run Python Tests Lint Checks",
+    "Run Python Tests Lockfile Check",
+    "Run Python Tests Type Checks",
     "Run Unit Tests",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud"]
