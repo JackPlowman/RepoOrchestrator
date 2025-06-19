@@ -53,7 +53,11 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
     "Run CodeLimit",
-    "Run Python Code Checks",
+    "Run Python Dead Code Checks",
+    "Run Python Format Checks",
+    "Run Python Lint Checks",
+    "Run Python Lockfile Check",
+    "Run Python Type Checks",
     "Run Unit Tests",
   ]
   required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor"]
