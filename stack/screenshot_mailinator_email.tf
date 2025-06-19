@@ -52,7 +52,6 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "Common Code Checks / Lefthook Validate",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
-    "Run CodeLimit",
     "Run Python Dead Code Checks",
     "Run Python Format Checks",
     "Run Python Lint Checks",

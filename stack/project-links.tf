@@ -67,7 +67,6 @@ module "project-links_default_branch_protection" {
     "Common Code Checks / Lefthook Validate",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
-    "Run CodeLimit",
     "Run Python Tests Format Checks",
     "Run Python Tests Lint Checks",
     "Run Python Tests Lockfile Check",
