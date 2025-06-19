@@ -68,7 +68,10 @@ module "project-links_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
     "Run CodeLimit",
-    "Run Python Test Code Checks",
+    "Run Python Tests Format Checks",
+    "Run Python Tests Lint Checks",
+    "Run Python Tests Lockfile Check",
+    "Run Python Tests Type Checks",
     "Run TypeScript Code Checks",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint"]
