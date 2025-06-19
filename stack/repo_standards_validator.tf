@@ -56,7 +56,11 @@ module "repo_standards_validator_default_branch_protection" {
     "Common Pull Request Tasks / Label Pull Request",
     "Run CodeLimit",
     "Run Local Action",
-    "Run Python Code Checks",
+    "Run Python Format Checks",
+    "Run Python Lint Checks",
+    "Run Python Lockfile Check",
+    "Run Python Type Checks",
+    "Run Python Dead Code Checks",
     "Run Unit Tests",
     "Validate Schema",
   ]
