@@ -55,7 +55,6 @@ module "github-stats-analyser_default_branch_protection" {
     "Common Code Checks / Lefthook Validate",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
-    "Run CodeLimit",
     "Run Local Action",
     "Run Python Dead Code Checks",
     "Run Python Format Checks",

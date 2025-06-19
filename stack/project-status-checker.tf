@@ -56,7 +56,6 @@ module "project-status-checker_default_branch_protection" {
     "Common Code Checks / Lefthook Validate",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
-    "Run CodeLimit",
     "Run Local Project Status Checker Action",
     "Run Unit Tests",
     "Test GitHub Summary",
