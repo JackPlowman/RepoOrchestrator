@@ -52,10 +52,12 @@ module "development-ideas_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "CodeQL Analysis (actions) / Analyse code",
+    "Common Code Checks / Check GitHub Actions with Actionlint",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
     "Common Code Checks / Lefthook Validate",
+    "Common Code Checks / Pinact Check",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
   ]
