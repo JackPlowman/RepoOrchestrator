@@ -55,10 +55,12 @@ module "actions-status_default_branch_protection" {
     "Check Pull Request Title",
     "CodeQL Analysis (actions) / Analyse code",
     "CodeQL Analysis (typescript) / Analyse code",
+    "Common Code Checks / Check GitHub Actions with Actionlint",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
     "Common Code Checks / Check Markdown links",
     "Common Code Checks / Lefthook Validate",
+    "Common Code Checks / Pinact Check",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
   ]
