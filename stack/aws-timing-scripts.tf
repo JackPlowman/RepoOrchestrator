@@ -54,6 +54,7 @@ module "aws-timing-scripts_default_branch_protection" {
     "Run Python Dead Code Checks",
     "Run Python Format Checks",
     "Run Python Lint Checks",
+    "Run Python Type Checks",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff"]
 
