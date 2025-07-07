@@ -28,4 +28,10 @@ resource "github_repository" "gitdash" {
       status = "enabled"
     }
   }
+
+  template {
+    include_all_branches = false
+    owner                = "JackPlowman"
+    repository           = "repository-template"
+  }
 }
