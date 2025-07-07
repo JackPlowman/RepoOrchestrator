@@ -46,6 +46,8 @@ module "repository-template_default_branch_protection" {
     "Common Code Checks / Check GitHub Actions with Actionlint",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
+    "Common Code Checks / Check for Secrets with Gitleaks",
+    "Common Code Checks / Check for Secrets with TruffleHog",
     "Common Code Checks / Check Markdown links",
     "Common Code Checks / Lefthook Validate",
     "Common Code Checks / Pinact Check",
