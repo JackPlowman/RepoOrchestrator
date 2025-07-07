@@ -35,3 +35,8 @@ resource "github_repository" "gitdash" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "gitdash" {
+  repository = github_repository.gitdash.name
+  enabled    = true
+}
