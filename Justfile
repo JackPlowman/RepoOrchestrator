@@ -12,7 +12,7 @@ tofu-plan:
 
 # Apply the tofu stack
 tofu-apply:
-    cd stack && tofu apply
+    cd stack && tofu apply -parallelism 30
 
 # Format the tofu code
 tofu-fmt:
