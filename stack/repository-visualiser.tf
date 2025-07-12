@@ -60,6 +60,8 @@ module "repository-visualiser_default_branch_protection" {
     "Common Code Checks / Check for Secrets with Gitleaks",
     "Common Code Checks / Check for Secrets with TruffleHog",
     "Common Code Checks / Check for Vulnerabilities with Grype",
+    "Common Code Checks / Lefthook Validate",
+    "Common Code Checks / Pinact Check",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
     "Repository Visualiser",
