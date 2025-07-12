@@ -62,6 +62,8 @@ module "DependabotTrigger_default_branch_protection" {
     "Common Code Checks / Check for Vulnerabilities with Grype",
     "Common Code Checks / Lefthook Validate",
     "Common Code Checks / Pinact Check",
+    "Common Pull Request Tasks / Dependency Review",
+    "Common Pull Request Tasks / Label Pull Request",
     "Run Python Dead Code Checks",
     "Run Python Format Checks",
     "Run Python Lint Checks",
