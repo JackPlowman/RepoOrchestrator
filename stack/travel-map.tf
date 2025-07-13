@@ -62,6 +62,7 @@ module "travel-map_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "CodeQL Analysis (actions) / Analyse code",
+    "CodeQL Analysis (javascript) / Analyse code",
     "Common Code Checks / Check GitHub Actions with Actionlint",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
@@ -73,6 +74,8 @@ module "travel-map_default_branch_protection" {
     "Common Code Checks / Pinact Check",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
+    "Run JavaScript Format Checks",
+    "Run JavaScript Lint Checks",
   ]
   required_code_scanning_tools = ["zizmor", "CodeQL"]
 
