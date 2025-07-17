@@ -39,3 +39,8 @@ resource "github_repository" "one-time-scripts" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "one-time-scripts" {
+  repository = github_repository.one-time-scripts.name
+  enabled    = true
+}
