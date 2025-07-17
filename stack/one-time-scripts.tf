@@ -2,7 +2,7 @@ resource "github_repository" "one-time-scripts" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "one-time-scripts"
-  description = ""
+  description = "My collection of one-time scripts for various administrative or setup tasks."
   visibility  = "public"
 
   # Repository Features
