@@ -8,7 +8,7 @@ tofu-init:
 
 # Plan the tofu stack
 tofu-plan:
-    cd stack && tofu plan
+    cd stack && tofu plan -parallelism 30
 
 # Apply the tofu stack
 tofu-apply:
