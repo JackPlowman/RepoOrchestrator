@@ -2,7 +2,7 @@ resource "github_repository" "dev-cli" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "dev-cli"
-  description = ""
+  description = "My collection of development command-line tools and scripts"
   visibility  = "public"
 
   # Pull Request settings
