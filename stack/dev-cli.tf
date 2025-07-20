@@ -35,3 +35,8 @@ resource "github_repository" "dev-cli" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "dev-cli" {
+  repository = github_repository.dev-cli.name
+  enabled    = true
+}
