@@ -40,3 +40,27 @@ resource "github_repository_dependabot_security_updates" "dev-cli" {
   repository = github_repository.dev-cli.name
   enabled    = true
 }
+
+module "dev-cli_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.dev-cli.name
+  required_status_checks = [
+    "Check Code Quality",
+    "CodeQL Analysis (actions) / Analyse code",
+    "Common Code Checks / Check GitHub Actions with Actionlint",
+    "Common Code Checks / Check GitHub Actions with zizmor",
+    "Common Code Checks / Check Justfile Format",
+    "Common Code Checks / Check Markdown links",
+    "Common Code Checks / Check for Secrets with Gitleaks",
+    "Common Code Checks / Check for Secrets with TruffleHog",
+    "Common Code Checks / Check for Vulnerabilities with Grype",
+    "Common Code Checks / Lefthook Validate",
+    "Common Code Checks / Pinact Check",
+    "Common Pull Request Tasks / Dependency Review",
+    "Common Pull Request Tasks / Label Pull Request",
+  ]
+  required_code_scanning_tools = ["zizmor", "CodeQL"]
+
+  depends_on = [github_repository.dev-cli]
+}
