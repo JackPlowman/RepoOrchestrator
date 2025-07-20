@@ -2,17 +2,19 @@
 # Tofu
 # ------------------------------------------------------------------------------
 
+export tofu_parallelism := "30"
+
 # Initialize the tofu stack
 tofu-init:
     cd stack && tofu init
 
 # Plan the tofu stack
 tofu-plan:
-    cd stack && tofu plan -parallelism 30
+    cd stack && tofu plan -parallelism ${tofu_parallelism}
 
 # Apply the tofu stack
 tofu-apply:
-    cd stack && tofu apply -parallelism 30
+    cd stack && tofu apply -parallelism ${tofu_parallelism}
 
 # Format the tofu code
 tofu-fmt:
