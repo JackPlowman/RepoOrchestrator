@@ -70,7 +70,7 @@ module "github-stats-analyser_default_branch_protection" {
     "Test GitHub Summary",
     "Validate Schema",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud", "Grype"]
 
   depends_on = [github_repository.github-stats-analyser]
 }

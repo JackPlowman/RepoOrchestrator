@@ -64,7 +64,7 @@ module "screenshot_mailinator_email_default_branch_protection" {
     "Run Python Type Checks",
     "Run Unit Tests",
   ]
-  required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor"]
+  required_code_scanning_tools = ["CodeQL", "SonarCloud", "Ruff", "zizmor", "Grype"]
 
   depends_on = [github_repository.screenshot_mailinator_email]
 }

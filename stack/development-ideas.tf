@@ -64,7 +64,7 @@ module "development-ideas_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Grype"]
 
   depends_on = [github_repository.development-ideas]
 }

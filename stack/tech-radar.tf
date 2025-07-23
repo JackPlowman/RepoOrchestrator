@@ -73,7 +73,7 @@ module "tech-radar_default_branch_protection" {
     "Run Python Tests Type Checks",
     "SonarCloud Scan",
   ]
-  required_code_scanning_tools = ["SonarCloud", "zizmor", "CodeQL", "Ruff"]
+  required_code_scanning_tools = ["SonarCloud", "zizmor", "CodeQL", "Ruff", "Grype"]
 
   depends_on = [github_repository.tech-radar]
 }
