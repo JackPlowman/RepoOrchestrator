@@ -77,7 +77,7 @@ module "travel-map_default_branch_protection" {
     "Run JavaScript Format Checks",
     "Run JavaScript Lint Checks",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Grype"]
 
   depends_on = [github_repository.travel-map]
 }

@@ -64,7 +64,7 @@ module "python-practise_default_branch_protection" {
     "Run Python Type Checks",
     "Run Unit Tests",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff", "SonarCloud", "zizmor"]
+  required_code_scanning_tools = ["CodeQL", "Ruff", "SonarCloud", "zizmor", "Grype"]
 
   depends_on = [github_repository.python-practise]
 }

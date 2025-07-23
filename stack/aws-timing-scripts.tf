@@ -59,7 +59,7 @@ module "aws-timing-scripts_default_branch_protection" {
     "Run Python Lint Checks",
     "Run Python Type Checks",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "Grype"]
 
   depends_on = [github_repository.aws-timing-scripts]
 }
