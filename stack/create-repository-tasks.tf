@@ -42,6 +42,7 @@ module "create-repository-tasks_default_branch_protection" {
   required_status_checks = [
     "Check Code Quality",
     "CodeQL Analysis (actions) / Analyse code",
+    "Common Code Checks / Check File Formats with EditorConfig Checker",
     "Common Code Checks / Check GitHub Actions with Actionlint",
     "Common Code Checks / Check GitHub Actions with zizmor",
     "Common Code Checks / Check Justfile Format",
