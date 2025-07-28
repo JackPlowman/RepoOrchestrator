@@ -29,6 +29,7 @@ module "useful-commands_default_branch_protection" {
 
   repository_name = github_repository.useful-commands.name
   required_status_checks = [
+    "Common Code Checks / Check File Formats with EditorConfig Checker",
     "Check Code Quality",
     "CodeQL Analysis (actions) / Analyse code",
     "Common Code Checks / Check GitHub Actions with Actionlint",
