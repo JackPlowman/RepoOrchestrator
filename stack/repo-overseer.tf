@@ -76,8 +76,9 @@ module "repo-overseer_default_branch_protection" {
     "Run Python Tests Lockfile Check",
     "Run Python Tests Type Checks",
     "Run TypeScript Code Checks",
+    "Run TypeScript Format Checks",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor", "Grype"]
+  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor", "ESLint", "Grype"]
 
   depends_on = [github_repository.repo-overseer]
 }
