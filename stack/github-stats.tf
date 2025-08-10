@@ -76,9 +76,8 @@ module "github-stats_default_branch_protection" {
     "Run Python Tests Lockfile Check",
     "Run Python Tests Type Checks",
     "Run TypeScript Code Checks",
-    "Test TypeScript Code",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint", "SonarCloud", "Grype"]
+  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "ESLint", "Grype"]
 
   depends_on = [github_repository.github-stats]
 }
