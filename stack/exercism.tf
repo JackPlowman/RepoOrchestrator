@@ -6,8 +6,8 @@ resource "github_repository" "exercism" {
   visibility  = "public"
 
   # Repository Features
-  has_issues   = true
-  has_projects = true
+  has_issues   = false
+  has_projects = false
 
   # Pull Request settings
   allow_auto_merge            = true
