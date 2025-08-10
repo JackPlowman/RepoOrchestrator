@@ -39,3 +39,8 @@ resource "github_repository" "remove-pr-bot-collaborators" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "remove-pr-bot-collaborators" {
+  repository = github_repository.remove-pr-bot-collaborators.name
+  enabled    = true
+}
