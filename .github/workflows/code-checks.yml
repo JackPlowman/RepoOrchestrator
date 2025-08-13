@@ -23,7 +23,7 @@ jobs:
       statuses: write
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -47,7 +47,7 @@ jobs:
       actions: read
       pull-requests: write
       security-events: write
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@440c19531fe4aaad17688abf374ed722792369c5 # v2025.08.08.01
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@213eae09e5b24b7be8a5ca596be7ea34a7c0989d # v2025.08.11.03
     secrets:
       workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -59,6 +59,6 @@ jobs:
     strategy:
       matrix:
         language: [actions]
-    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@440c19531fe4aaad17688abf374ed722792369c5 # v2025.08.08.01
+    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@213eae09e5b24b7be8a5ca596be7ea34a7c0989d # v2025.08.11.03
     with:
       language: ${{ matrix.language }}
