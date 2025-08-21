@@ -71,7 +71,7 @@ module "github-stats-analyser_default_branch_protection" {
     "Test GitHub Summary",
     "Validate Schema",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud", "Grype"]
+  required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "SonarCloud"])
 
   depends_on = [github_repository.github-stats-analyser]
 }
