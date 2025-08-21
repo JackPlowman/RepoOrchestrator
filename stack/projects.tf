@@ -65,7 +65,7 @@ module "projects_default_branch_protection" {
     "Run Python Lint Checks",
     "Run Python Type Checks",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Grype"]
+  required_code_scanning_tools = local.common_code_scanning_tools
 
   depends_on = [github_repository.projects]
 }

@@ -66,7 +66,7 @@ module "project-status-checker_default_branch_protection" {
     "Run Unit Tests",
     "Test GitHub Summary",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor", "SonarCloud", "Grype"]
+  required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "SonarCloud"])
 
   depends_on = [github_repository.project-status-checker]
 }

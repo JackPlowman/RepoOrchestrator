@@ -56,7 +56,7 @@ module "repository-template_default_branch_protection" {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Grype"]
+  required_code_scanning_tools = local.common_code_scanning_tools
 
   depends_on = [github_repository.repository-template]
 }

@@ -82,7 +82,7 @@ module "SlocCount_default_branch_protection" {
     "Run Python Tests Type Checks",
     "Run Unit Tests",
   ]
-  required_code_scanning_tools = ["zizmor", "CodeQL", "Ruff", "SonarCloud", "Grype"]
+  required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "SonarCloud"])
 
   depends_on = [github_repository.SlocCount]
 }

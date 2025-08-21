@@ -69,7 +69,7 @@ module "repo_standards_validator_default_branch_protection" {
     "Run Unit Tests",
     "Validate Schema",
   ]
-  required_code_scanning_tools = ["CodeQL", "Ruff", "zizmor", "SonarCloud", "Grype"]
+  required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "SonarCloud"])
 
   depends_on = [github_repository.repo_standards_validator]
 }
