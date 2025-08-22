@@ -44,3 +44,19 @@ resource "github_repository_dependabot_security_updates" "coding-metrics" {
   repository = github_repository.coding-metrics.name
   enabled    = true
 }
+
+module "coding-metrics_default_branch_protection" {
+  source = "../modules/default-branch-protection"
+
+  repository_name = github_repository.coding-metrics.name
+  required_status_checks = concat(
+    [
+      "CodeQL Analysis (actions) / Analyse code",
+      "CodeQL Analysis (go) / Analyse code"
+    ],
+    local.common_required_status_checks
+  )
+  required_code_scanning_tools = local.common_code_scanning_tools
+
+  depends_on = [github_repository.coding-metrics]
+}
