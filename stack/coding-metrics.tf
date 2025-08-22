@@ -39,3 +39,8 @@ resource "github_repository" "coding-metrics" {
     repository           = "repository-template"
   }
 }
+
+resource "github_repository_dependabot_security_updates" "coding-metrics" {
+  repository = github_repository.coding-metrics.name
+  enabled    = true
+}
