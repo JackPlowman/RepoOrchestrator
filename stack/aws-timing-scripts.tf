@@ -48,6 +48,7 @@ module "aws-timing-scripts_default_branch_protection" {
       "Run Python Lint Checks",
       "Run Python Type Checks",
     ],
+    local.common_required_status_checks
   )
   required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff"])
 
