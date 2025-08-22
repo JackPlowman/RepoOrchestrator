@@ -2,7 +2,7 @@ resource "github_repository" "coding-metrics" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "coding-metrics"
-  description = ""
+  description = "A repository for tracking, analysing, and reporting coding metrics."
   visibility  = "public"
 
   # Repository Features
