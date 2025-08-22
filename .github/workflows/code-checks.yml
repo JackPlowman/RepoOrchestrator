@@ -62,3 +62,31 @@ jobs:
     uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@213eae09e5b24b7be8a5ca596be7ea34a7c0989d # v2025.08.11.03
     with:
       language: ${{ matrix.language }}
+
+  checkov-scan:
+    name: Checkov Scan
+    permissions:
+      contents: read
+      security-events: write
+      actions: read #
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkov GitHub Action
+        uses: bridgecrewio/checkov-action@eec884fd62682f5f2b33e303e160d5e2fe8d89ec # v12.3052.0
+        with:
+          directory: .
+          framework: terraform
+          output_format: cli,sarif
+          output_file_path: console,results.sarif
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@86b04fb0e47484f7282357688f21d5d0e32175fe # v3.29.11
+        if: always()
+        with:
+          sarif_file: results.sarif
