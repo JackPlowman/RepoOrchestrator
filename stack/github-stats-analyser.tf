@@ -49,7 +49,6 @@ module "github-stats-analyser_default_branch_protection" {
       "Check Pull Request Title",
       "CodeQL Analysis (actions) / Analyse code",
       "CodeQL Analysis (python) / Analyse code",
-      "CodeQL Analysis (go) / Analyse code",
       "Run Local Action",
       "Run Python Dead Code Checks",
       "Run Python Format Checks",
