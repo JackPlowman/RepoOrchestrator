@@ -81,6 +81,7 @@ jobs:
         with:
           directory: .
           framework: terraform
+          use_enforcement_rules: true
           output_format: cli,sarif
           output_file_path: console,results.sarif
       - name: Upload SARIF file
