@@ -53,31 +53,22 @@ module "repo-overseer_default_branch_protection" {
   source = "../modules/default-branch-protection"
 
   repository_name = github_repository.repo-overseer.name
-  required_status_checks = [
-    "Check Code Quality",
-    "Check Pull Request Title",
-    "CodeQL Analysis (actions) / Analyse code",
-    "CodeQL Analysis (python) / Analyse code",
-    "CodeQL Analysis (typescript) / Analyse code",
-    "Common Code Checks / Check File Formats with EditorConfig Checker",
-    "Common Code Checks / Check GitHub Actions with Actionlint",
-    "Common Code Checks / Check GitHub Actions with zizmor",
-    "Common Code Checks / Check Justfile Format",
-    "Common Code Checks / Check Markdown links",
-    "Common Code Checks / Check for Secrets with Gitleaks",
-    "Common Code Checks / Check for Secrets with TruffleHog",
-    "Common Code Checks / Check for Vulnerabilities with Grype",
-    "Common Code Checks / Lefthook Validate",
-    "Common Code Checks / Pinact Check",
-    "Common Pull Request Tasks / Dependency Review",
-    "Common Pull Request Tasks / Label Pull Request",
-    "Run Python Tests Format Checks",
-    "Run Python Tests Lint Checks",
-    "Run Python Tests Lockfile Check",
-    "Run Python Tests Type Checks",
-    "Run TypeScript Code Checks",
-    "Run TypeScript Format Checks",
-  ]
+  required_status_checks = concat(
+    [
+      "Check Code Quality",
+      "Check Pull Request Title",
+      "CodeQL Analysis (actions) / Analyse code",
+      "CodeQL Analysis (python) / Analyse code",
+      "CodeQL Analysis (typescript) / Analyse code",
+      "Run Python Tests Format Checks",
+      "Run Python Tests Lint Checks",
+      "Run Python Tests Lockfile Check",
+      "Run Python Tests Type Checks",
+      "Run TypeScript Code Checks",
+      "Run TypeScript Format Checks",
+    ],
+    local.common_required_status_checks
+  )
   required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "ESLint"])
 
   depends_on = [github_repository.repo-overseer]
