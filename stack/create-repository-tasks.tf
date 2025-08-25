@@ -40,9 +40,7 @@ module "create-repository-tasks_default_branch_protection" {
 
   repository_name = github_repository.create-repository-tasks.name
   required_status_checks = concat(
-    [
-      "CodeQL Analysis (actions) / Analyse code",
-    ],
+    ["CodeQL Analysis (actions) / Analyse code"],
     local.common_required_status_checks
   )
   required_code_scanning_tools = local.common_code_scanning_tools
