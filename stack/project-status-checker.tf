@@ -43,29 +43,20 @@ module "project-status-checker_default_branch_protection" {
   source = "../modules/default-branch-protection"
 
   repository_name = github_repository.project-status-checker.name
-  required_status_checks = [
-    "Build Docker Image and Run",
-    "Check Code Quality",
-    "Check Pull Request Title",
-    "Check Python Code Format and Quality",
-    "CodeQL Analysis (actions) / Analyse code",
-    "CodeQL Analysis (python) / Analyse code",
-    "Common Code Checks / Check File Formats with EditorConfig Checker",
-    "Common Code Checks / Check GitHub Actions with Actionlint",
-    "Common Code Checks / Check GitHub Actions with zizmor",
-    "Common Code Checks / Check Justfile Format",
-    "Common Code Checks / Check Markdown links",
-    "Common Code Checks / Check for Secrets with Gitleaks",
-    "Common Code Checks / Check for Secrets with TruffleHog",
-    "Common Code Checks / Check for Vulnerabilities with Grype",
-    "Common Code Checks / Lefthook Validate",
-    "Common Code Checks / Pinact Check",
-    "Common Pull Request Tasks / Dependency Review",
-    "Common Pull Request Tasks / Label Pull Request",
-    "Run Local Project Status Checker Action",
-    "Run Unit Tests",
-    "Test GitHub Summary",
-  ]
+  required_status_checks = concat(
+    [
+      "Build Docker Image and Run",
+      "Check Code Quality",
+      "Check Pull Request Title",
+      "Check Python Code Format and Quality",
+      "CodeQL Analysis (actions) / Analyse code",
+      "CodeQL Analysis (python) / Analyse code",
+      "Run Local Project Status Checker Action",
+      "Run Unit Tests",
+      "Test GitHub Summary",
+    ],
+    local.common_required_status_checks
+  )
   required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "SonarCloud"])
 
   depends_on = [github_repository.project-status-checker]
