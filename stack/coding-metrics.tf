@@ -51,12 +51,14 @@ module "coding-metrics_default_branch_protection" {
   repository_name = github_repository.coding-metrics.name
   required_status_checks = concat(
     [
+      "Check Pull Request Title",
       "CodeQL Analysis (actions) / Analyse code",
       "CodeQL Analysis (go) / Analyse code",
       "Go Build",
       "Go Dependency Submission",
       "Run Go Dependency Vulnerability Checks",
       "Run Go Format and Lint Checks",
+      "Test Action",
     ],
     local.common_required_status_checks
   )
