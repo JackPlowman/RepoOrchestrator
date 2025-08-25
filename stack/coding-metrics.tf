@@ -52,7 +52,11 @@ module "coding-metrics_default_branch_protection" {
   required_status_checks = concat(
     [
       "CodeQL Analysis (actions) / Analyse code",
-      "CodeQL Analysis (go) / Analyse code"
+      "CodeQL Analysis (go) / Analyse code",
+      "Go Build",
+      "Go Dependency Submission",
+      "Run Go Dependency Vulnerability Checks",
+      "Run Go Format and Lint Checks",
     ],
     local.common_required_status_checks
   )
