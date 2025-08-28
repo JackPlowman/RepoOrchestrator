@@ -46,7 +46,6 @@ module "project-status-checker_default_branch_protection" {
   required_status_checks = concat(
     [
       "Build Docker Image and Run",
-      "Check Code Quality",
       "Check Pull Request Title",
       "Check Python Code Format and Quality",
       "CodeQL Analysis (actions) / Analyse code",

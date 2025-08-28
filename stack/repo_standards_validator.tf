@@ -45,7 +45,6 @@ module "repo_standards_validator_default_branch_protection" {
   repository_name = github_repository.repo_standards_validator.name
   required_status_checks = concat(
     [
-      "Check Code Quality",
       "Check Pull Request Title",
       "CodeQL Analysis (actions) / Analyse code",
       "CodeQL Analysis (python) / Analyse code",

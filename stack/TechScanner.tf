@@ -50,7 +50,6 @@ module "TechScanner_default_branch_protection" {
 
   repository_name = github_repository.TechScanner.name
   required_status_checks = [
-    "Check Code Quality",
     "CodeQL Analysis (actions) / Analyse code",
     "Common Code Checks / Check File Formats with EditorConfig Checker",
     "Common Code Checks / Check GitHub Actions with Actionlint",
