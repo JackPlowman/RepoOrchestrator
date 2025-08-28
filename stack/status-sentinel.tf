@@ -54,7 +54,6 @@ module "status-sentinel_default_branch_protection" {
 
   repository_name = github_repository.status-sentinel.name
   required_status_checks = [
-    "Check Code Quality",
     "Check Pull Request Title",
     "CodeQL Analysis (actions) / Analyse code",
     "CodeQL Analysis (python) / Analyse code",
