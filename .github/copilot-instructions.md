@@ -9,7 +9,7 @@
 
 ## Repo layout patterns
 
-- `stack/terraform.tf` configures the `integrations/github` provider and stores state at `../../RepoOrchestratorState/terraform.tfstate`; clone the `RepoOrchestratorState` repo next to this one before running Tofu.
+- `stack/terraform.tf` configures the `integrations/github` provider and stores state at `../../RepoOrchestratorState/terraform.tfstate`; assume this folder already exists when running Tofu.
 - `stack/locals.tf` defines shared status checks and scanning tools; most repositories `concat` additional checks on top of these lists.
 - Standard stack file structure:
   - `resource "github_repository"` with security settings (`secret_scanning`, `web_commit_signoff_required`, etc.).
