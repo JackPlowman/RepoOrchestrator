@@ -16,6 +16,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write # For writing labels to the repository
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-sync-labels.yml@c7b491eb600bdc990a92ee18b10e3e5b7c09212f # v2025.09.27.02
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-sync-labels.yml@fbdbc94a4c6834568b4cda1a34a590334b4b1c3a # v2025.09.28.03
     secrets:
       workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
