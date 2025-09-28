@@ -20,6 +20,7 @@ locals {
   common_code_scanning_tools = [
     "CodeQL",
     "Trivy",
+    "gitleaks",
     "grype",
     "zizmor",
     ]
