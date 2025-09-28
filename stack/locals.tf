@@ -17,5 +17,10 @@ locals {
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
   ]
-  common_code_scanning_tools = ["zizmor", "CodeQL", "grype"]
+  common_code_scanning_tools = [
+    "CodeQL",
+    "Trivy",
+    "grype",
+    "zizmor",
+    ]
 }
