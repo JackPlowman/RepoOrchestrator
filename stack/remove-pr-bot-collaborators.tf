@@ -54,6 +54,8 @@ module "remove-pr-bot-collaborators_default_branch_protection" {
     [
       "CodeQL Analysis (actions) / Analyse code",
       "CodeQL Analysis (javascript) / Analyse code",
+      "Run JavaScript Code Checks",
+      "Run JavaScript Format Checks",
     ],
     local.common_required_status_checks
   )
