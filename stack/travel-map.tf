@@ -63,7 +63,12 @@ module "travel-map_default_branch_protection" {
     "CodeQL Analysis (actions) / Analyse code",
     "CodeQL Analysis (javascript) / Analyse code",
     "Run JavaScript Format Checks",
-    "Run JavaScript Lint Checks"],
+    "Run JavaScript Lint Checks",
+    "Run Python Tests Format Checks",
+    "Run Python Tests Lint Checks",
+    "Run Python Tests Lockfile Check",
+    "Run Python Tests Type Checks"
+    ],
     local.common_required_status_checks
   )
   required_code_scanning_tools = ["zizmor", "CodeQL", "Grype"]

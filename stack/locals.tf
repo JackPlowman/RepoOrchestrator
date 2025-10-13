@@ -23,5 +23,5 @@ locals {
     "gitleaks",
     "grype",
     "zizmor",
-    ]
+  ]
 }
