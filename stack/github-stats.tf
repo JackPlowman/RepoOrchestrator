@@ -64,6 +64,7 @@ module "github-stats_default_branch_protection" {
       "Run Python Tests Lockfile Check",
       "Run Python Tests Type Checks",
       "Run TypeScript Code Checks",
+      "Run TypeScript Format Checks",
     ],
     local.common_required_status_checks
   )
