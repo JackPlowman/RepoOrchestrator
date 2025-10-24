@@ -78,5 +78,7 @@ jobs:
         uses: opentofu/setup-opentofu@000eeb8522f0572907c393e8151076c205fdba1b # v1.0.6
         with:
           tofu_version: 1.10.6
+      - name: Tofu Init
+        run: just tofu-init
       - name: Tofu Validate
         run: just tofu-validate
