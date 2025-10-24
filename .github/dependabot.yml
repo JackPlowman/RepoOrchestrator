@@ -18,6 +18,8 @@ updates:
         update-types:
           - "patch"
           - "minor"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "terraform"
     directories:
@@ -36,3 +38,5 @@ updates:
         update-types:
           - "patch"
           - "minor"
+    cooldown:
+      default-days: 7
