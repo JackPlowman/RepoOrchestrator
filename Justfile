@@ -24,6 +24,10 @@ tofu-fmt:
 tofu-fmt-check:
     tofu fmt -recursive -check
 
+# Validate the tofu stack
+tofu-validate:
+    cd stack && tofu validate
+
 # ------------------------------------------------------------------------------
 # Checkov
 # ------------------------------------------------------------------------------

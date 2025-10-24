@@ -58,3 +58,25 @@ jobs:
           framework: terraform
           output_format: cli
           output_file_path: console
+
+  tofu-validate:
+    name: Tofu Validate
+    permissions:
+      contents: read
+      security-events: write # Allow the workflow to upload analysis results
+      actions: read # Allow the workflow to read actions metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Just
+        uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+      - name: Set up OpenTofu
+        uses: opentofu/setup-opentofu@000eeb8522f0572907c393e8151076c205fdba1b # v1.0.6
+        with:
+          tofu_version: 1.10.6
+      - name: Tofu Validate
+        run: just tofu-validate
