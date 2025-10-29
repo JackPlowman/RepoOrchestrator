@@ -68,6 +68,8 @@ module "SlocCount_default_branch_protection" {
       "Run Python Tests Lint Checks",
       "Run Python Tests Lockfile Check",
       "Run Python Tests Type Checks",
+      "Run TypeScript Dashboard Code Checks",
+      "Run TypeScript Dashboard Format Checks",
       "Run Unit Tests",
     ],
     local.common_required_status_checks
