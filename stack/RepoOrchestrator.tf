@@ -43,6 +43,7 @@ module "RepoOrchestrator_default_branch_protection" {
     [
       "Checkov Scan",
       "CodeQL Analysis (actions) / Analyse code",
+      "TFLint Scan",
       "Tofu Validate",
     ],
     local.common_required_status_checks
