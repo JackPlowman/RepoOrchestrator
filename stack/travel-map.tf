@@ -2,7 +2,7 @@ resource "github_repository" "travel-map" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name         = "travel-map"
-  description  = ""
+  description  = "Travel Map is an interactive web application that visualises my global travel experiences."
   visibility   = "public"
   homepage_url = "https://jackplowman.github.io/travel-map/"
 
