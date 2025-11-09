@@ -2,7 +2,7 @@ resource "github_repository" "windows-development-environment" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "windows-development-environment"
-  description = ""
+  description = "A curated set of dotfiles, scripts, and tools to supercharge my Windows development workflow."
   visibility  = "public"
 
   # Pull Request settings
