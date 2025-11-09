@@ -1,9 +1,10 @@
 resource "github_repository" "test-coding-metrics" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
-  name        = "test-coding-metrics"
-  description = ""
-  visibility  = "public"
+  name         = "test-coding-metrics"
+  description  = "Test JackPlowman/coding-metrics GitHub Action."
+  visibility   = "public"
+  homepage_url = "https://github.com/JackPlowman/coding-metrics"
 
   # Pull Request settings
   allow_auto_merge            = true
