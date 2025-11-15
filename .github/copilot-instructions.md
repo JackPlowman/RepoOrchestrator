@@ -2,7 +2,7 @@
 
 ## Big picture
 
-- Infrastructure-as-code repo that drives **JackPlowman**'s GitHub org using OpenTofu 1.10.6.
+- Infrastructure-as-code repo that drives **JackPlowman**'s GitHub org using OpenTofu 1.10.7.
 - Desired state lives in `stack/*.tf`; each file usually maps 1:1 to a managed repository or automation project.
 - The `modules/` folder holds reusable Terraform modules; currently `default-branch-protection` centralises branch protection rules and status checks.
 - GitHub Actions for this repo depend on pinned commits from `JackPlowman/reusable-workflows`; keep references in `.github/workflows/*.yml` aligned with `stack/reusable-workflows.tf`.
