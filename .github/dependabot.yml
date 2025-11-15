@@ -22,7 +22,7 @@ updates:
     cooldown:
       default-days: 7
 
-  - package-ecosystem: "opentofu"
+  - package-ecosystem: "terraform"
     directories:
       - "/stack"
       - "/modules/default-branch-protection"
@@ -39,5 +39,5 @@ updates:
         update-types:
           - "patch"
           - "minor"
-    # cooldown:
-    #   default-days: 7
+    cooldown:
+      default-days: 7
