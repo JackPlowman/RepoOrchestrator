@@ -80,7 +80,7 @@ jobs:
       - name: Set up TFLint
         uses: terraform-linters/setup-tflint@4cb9feea73331a35b422df102992a03a44a3bb33 # v6.2.1
         with:
-          tflint_version: v0.59.1
+          tflint_version: v0.60.0
       - name: TFLint Init
         run: just tflint-init
       - name: TFLint Check
