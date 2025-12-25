@@ -26,7 +26,7 @@ jobs:
       actions: read # Allow the workflow to read actions metadata
       pull-requests: write # Allow the workflow to create and modify pull request comments
       security-events: write # Allow the workflow to upload analysis results
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@a3a774e20f1269ae0062ad712637513f5040df9d # v2025.12.13.01
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@3108e71d84bdf3f50512f378742e2602f1d74628 # v2025.12.19.03
     secrets:
       workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -38,7 +38,7 @@ jobs:
     strategy:
       matrix:
         language: [actions]
-    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@a3a774e20f1269ae0062ad712637513f5040df9d # v2025.12.13.01
+    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@3108e71d84bdf3f50512f378742e2602f1d74628 # v2025.12.19.03
     with:
       language: ${{ matrix.language }}
 
@@ -102,7 +102,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
       - name: Set up OpenTofu
-        uses: opentofu/setup-opentofu@000eeb8522f0572907c393e8151076c205fdba1b # v1.0.6
+        uses: opentofu/setup-opentofu@e95ccdd20623115bfd7d47df14a3250d6066a9d0 # v1.0.7
         with:
           tofu_version: 1.10.7
       - name: Tofu Init
