@@ -44,6 +44,7 @@ repos:
       - id: zizmor
         name: Zizmor
         description: "Find security issues in GitHub Actions CI/CD setups"
+        args: ["--persona=auditor"]
   - repo: local
     hooks:
       - id: prettier
