@@ -12,8 +12,9 @@ locals {
     "Common Code Checks / Check for Secrets with Gitleaks",
     "Common Code Checks / Check for Secrets with TruffleHog",
     "Common Code Checks / Check for Vulnerabilities with Grype",
-    "Common Code Checks / Lefthook Validate",
     "Common Code Checks / Pinact Check",
+    "Common Code Checks / Run Prek pre-commit hook checks",
+    "Common Code Checks / Validate Prek Git Hooks Configuration",
     "Common Pull Request Tasks / Dependency Review",
     "Common Pull Request Tasks / Label Pull Request",
   ]
