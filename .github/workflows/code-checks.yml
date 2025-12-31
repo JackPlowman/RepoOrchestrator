@@ -19,29 +19,6 @@ env:
   FORCE_COLOR: 1
 
 jobs:
-  common-code-checks:
-    name: Common Code Checks
-    permissions:
-      contents: read
-      actions: read # Allow the workflow to read actions metadata
-      pull-requests: write # Allow the workflow to create and modify pull request comments
-      security-events: write # Allow the workflow to upload analysis results
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@61df2c978dadbc17ea3f190f703531f0dcce6db5 # v2025.12.30.04
-    secrets:
-      workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  codeql-checks:
-    name: CodeQL Analysis
-    permissions:
-      contents: read
-      security-events: write # Allow the workflow to upload analysis results
-    strategy:
-      matrix:
-        language: [actions]
-    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@61df2c978dadbc17ea3f190f703531f0dcce6db5 # v2025.12.30.04
-    with:
-      language: ${{ matrix.language }}
-
   checkov-scan:
     name: Checkov Scan
     permissions:
@@ -62,6 +39,29 @@ jobs:
           framework: terraform
           output_format: cli
           output_file_path: console
+
+  codeql-checks:
+    name: CodeQL Analysis
+    permissions:
+      contents: read
+      security-events: write # Allow the workflow to upload analysis results
+    strategy:
+      matrix:
+        language: [actions]
+    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@61df2c978dadbc17ea3f190f703531f0dcce6db5 # v2025.12.30.04
+    with:
+      language: ${{ matrix.language }}
+
+  common-code-checks:
+    name: Common Code Checks
+    permissions:
+      contents: read
+      actions: read # Allow the workflow to read actions metadata
+      pull-requests: write # Allow the workflow to create and modify pull request comments
+      security-events: write # Allow the workflow to upload analysis results
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@61df2c978dadbc17ea3f190f703531f0dcce6db5 # v2025.12.30.04
+    secrets:
+      workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
 
   tflint-scan:
     name: TFLint Scan
