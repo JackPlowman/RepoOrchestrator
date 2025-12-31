@@ -22,7 +22,7 @@ updates:
     cooldown:
       default-days: 7
 
-  - package-ecosystem: "opentofu"
+  - package-ecosystem: "opentofu" # zizmor: ignore[dependabot-cooldown]
     directories:
       - "/stack"
       - "/modules/default-branch-protection"
