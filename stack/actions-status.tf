@@ -2,7 +2,7 @@ resource "github_repository" "actions-status" {
   #checkov:skip=CKV_GIT_1
   #checkov:skip=CKV2_GIT_1
   name        = "actions-status"
-  description = ""
+  description = "Dashboard repository for tracking the health and status of default branch GitHub Actions workflows."
   visibility  = "public"
 
   # Repository Features
