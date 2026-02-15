@@ -16,7 +16,6 @@ resource "github_repository" "repository-template" {
 
   # Other settings
   is_template                 = true
-  has_downloads               = false
   vulnerability_alerts        = true
   web_commit_signoff_required = true
 
