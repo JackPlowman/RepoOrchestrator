@@ -52,7 +52,7 @@ repos:
         language: node
         entry: prettier
         additional_dependencies:
-          - prettier@3.9.1
+          - prettier@3.9.4
         args: ["--check"]
         files: "(?i)(\\.(md|markdown|ya?ml|json)$|^(README|LICENSE|CONTRIBUTING|CODE_OF_CONDUCT|SECURITY|SUPPORT)(\\.md)?$)"
       - id: justfile-format-check
@@ -60,7 +60,7 @@ repos:
         language: python
         entry: just
         additional_dependencies:
-          - rust-just==1.46.0
+          - rust-just==1.55.0
         args: ["format-check"]
         files: "(?i)(^justfile$|\\.just$)"
         pass_filenames: false
