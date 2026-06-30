@@ -19,7 +19,6 @@ resource "github_repository" "repo_standards_validator" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -31,6 +30,11 @@ resource "github_repository" "repo_standards_validator" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "repo_standards_validator" {
+  repository = github_repository.repo_standards_validator.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "repo_standards_validator" {

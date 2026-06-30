@@ -16,7 +16,6 @@ resource "github_repository" "project-links" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -29,21 +28,21 @@ resource "github_repository" "project-links" {
     }
   }
 
-
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
-
   template {
     include_all_branches = false
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "project-links" {
+  repository = github_repository.project-links.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "project-links" {
+  repository = github_repository.project-links.name
+  build_type = "workflow"
 }
 
 resource "github_repository_dependabot_security_updates" "project-links" {

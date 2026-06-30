@@ -13,8 +13,12 @@ resource "github_repository" "Software-Development-Notes" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
+}
+
+resource "github_repository_vulnerability_alerts" "Software-Development-Notes" {
+  repository = github_repository.Software-Development-Notes.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "Software-Development-Notes" {

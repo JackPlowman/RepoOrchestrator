@@ -20,7 +20,6 @@ resource "github_repository" "github-stats" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -32,15 +31,16 @@ resource "github_repository" "github-stats" {
       status = "enabled"
     }
   }
+}
 
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
+resource "github_repository_vulnerability_alerts" "github-stats" {
+  repository = github_repository.github-stats.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "github-stats" {
+  repository = github_repository.github-stats.name
+  build_type = "workflow"
 }
 
 resource "github_repository_dependabot_security_updates" "github-stats" {

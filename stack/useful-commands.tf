@@ -19,8 +19,12 @@ resource "github_repository" "useful-commands" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
+}
+
+resource "github_repository_vulnerability_alerts" "useful-commands" {
+  repository = github_repository.useful-commands.name
+  enabled    = true
 }
 
 module "useful-commands_default_branch_protection" {

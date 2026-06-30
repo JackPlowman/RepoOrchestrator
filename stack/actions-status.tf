@@ -19,7 +19,6 @@ resource "github_repository" "actions-status" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -37,6 +36,11 @@ resource "github_repository" "actions-status" {
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "actions-status" {
+  repository = github_repository.actions-status.name
+  enabled    = true
 }
 
 

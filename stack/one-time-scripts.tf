@@ -19,7 +19,6 @@ resource "github_repository" "one-time-scripts" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -37,6 +36,11 @@ resource "github_repository" "one-time-scripts" {
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "one-time-scripts" {
+  repository = github_repository.one-time-scripts.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "one-time-scripts" {

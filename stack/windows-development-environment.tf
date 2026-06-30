@@ -15,7 +15,6 @@ resource "github_repository" "windows-development-environment" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   template {
@@ -23,6 +22,11 @@ resource "github_repository" "windows-development-environment" {
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "windows-development-environment" {
+  repository = github_repository.windows-development-environment.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "windows-development-environment" {

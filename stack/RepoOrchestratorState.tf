@@ -13,8 +13,12 @@ resource "github_repository" "RepoOrchestratorState" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
+}
+
+resource "github_repository_vulnerability_alerts" "RepoOrchestratorState" {
+  repository = github_repository.RepoOrchestratorState.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "RepoOrchestratorState" {

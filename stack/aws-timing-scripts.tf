@@ -15,7 +15,6 @@ resource "github_repository" "aws-timing-scripts" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -27,6 +26,11 @@ resource "github_repository" "aws-timing-scripts" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "aws-timing-scripts" {
+  repository = github_repository.aws-timing-scripts.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "aws-timing-scripts" {
