@@ -19,7 +19,6 @@ resource "github_repository" "github-pr-analyser" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -31,6 +30,11 @@ resource "github_repository" "github-pr-analyser" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "github-pr-analyser" {
+  repository = github_repository.github-pr-analyser.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "github-pr-analyser" {

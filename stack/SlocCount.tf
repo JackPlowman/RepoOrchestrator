@@ -20,7 +20,6 @@ resource "github_repository" "SlocCount" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -33,20 +32,21 @@ resource "github_repository" "SlocCount" {
     }
   }
 
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
-
   template {
     include_all_branches = false
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "SlocCount" {
+  repository = github_repository.SlocCount.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "SlocCount" {
+  repository = github_repository.SlocCount.name
+  build_type = "workflow"
 }
 
 module "SlocCount_default_branch_protection" {

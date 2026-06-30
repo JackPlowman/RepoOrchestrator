@@ -18,7 +18,6 @@ resource "github_repository" "screenshot_mailinator_email" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -30,6 +29,11 @@ resource "github_repository" "screenshot_mailinator_email" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "screenshot_mailinator_email" {
+  repository = github_repository.screenshot_mailinator_email.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "screenshot_mailinator_email" {

@@ -16,7 +16,6 @@ resource "github_repository" "repository-template" {
 
   # Other settings
   is_template                 = true
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -28,6 +27,11 @@ resource "github_repository" "repository-template" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "repository-template" {
+  repository = github_repository.repository-template.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "repository-template" {

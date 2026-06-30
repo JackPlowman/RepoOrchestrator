@@ -16,7 +16,6 @@ resource "github_repository" "development-ideas" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -28,15 +27,16 @@ resource "github_repository" "development-ideas" {
       status = "enabled"
     }
   }
+}
 
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
+resource "github_repository_vulnerability_alerts" "development-ideas" {
+  repository = github_repository.development-ideas.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "development-ideas" {
+  repository = github_repository.development-ideas.name
+  build_type = "workflow"
 }
 
 resource "github_repository_dependabot_security_updates" "development-ideas" {

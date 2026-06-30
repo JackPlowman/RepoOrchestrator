@@ -20,7 +20,6 @@ resource "github_repository" "travel-map" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -33,20 +32,21 @@ resource "github_repository" "travel-map" {
     }
   }
 
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
-
   template {
     include_all_branches = false
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "travel-map" {
+  repository = github_repository.travel-map.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "travel-map" {
+  repository = github_repository.travel-map.name
+  build_type = "workflow"
 }
 
 resource "github_repository_dependabot_security_updates" "travel-map" {

@@ -20,7 +20,6 @@ resource "github_repository" "tech-radar" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -32,15 +31,16 @@ resource "github_repository" "tech-radar" {
       status = "enabled"
     }
   }
+}
 
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
+resource "github_repository_vulnerability_alerts" "tech-radar" {
+  repository = github_repository.tech-radar.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "tech-radar" {
+  repository = github_repository.tech-radar.name
+  build_type = "workflow"
 }
 
 resource "github_repository_dependabot_security_updates" "tech-radar" {

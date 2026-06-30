@@ -15,7 +15,6 @@ resource "github_repository" "development-environment" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -27,6 +26,11 @@ resource "github_repository" "development-environment" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "development-environment" {
+  repository = github_repository.development-environment.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "development-environment" {

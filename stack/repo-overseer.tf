@@ -20,17 +20,7 @@ resource "github_repository" "repo-overseer" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
-
-  # GitHub Pages settings
-  pages {
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
 
   # Security settings
   security_and_analysis {
@@ -41,6 +31,16 @@ resource "github_repository" "repo-overseer" {
       status = "enabled"
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "repo-overseer" {
+  repository = github_repository.repo-overseer.name
+  enabled    = true
+}
+
+resource "github_repository_pages" "repo-overseer" {
+  repository = github_repository.repo-overseer.name
+  build_type = "workflow"
 }
 
 resource "github_repository_dependabot_security_updates" "repo-overseer" {

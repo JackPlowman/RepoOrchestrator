@@ -16,7 +16,6 @@ resource "github_repository" "test-coding-metrics" {
   squash_merge_commit_title   = "PR_TITLE"
 
   # Other settings
-  vulnerability_alerts        = true
   web_commit_signoff_required = true
 
   # Security settings
@@ -34,6 +33,11 @@ resource "github_repository" "test-coding-metrics" {
     owner                = "JackPlowman"
     repository           = "repository-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "test-coding-metrics" {
+  repository = github_repository.test-coding-metrics.name
+  enabled    = true
 }
 
 resource "github_repository_dependabot_security_updates" "test-coding-metrics" {
