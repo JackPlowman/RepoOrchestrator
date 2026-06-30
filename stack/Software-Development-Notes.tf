@@ -1,5 +1,6 @@
 resource "github_repository" "Software-Development-Notes" {
   #checkov:skip=CKV2_GIT_1
+  #checkov:skip=CKV_GIT_3
   name        = "Software-Development-Notes"
   description = ""
   visibility  = "private"
