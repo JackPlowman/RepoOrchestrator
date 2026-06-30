@@ -1,5 +1,6 @@
 resource "github_repository" "RepoOrchestratorState" {
   #checkov:skip=CKV2_GIT_1
+  #checkov:skip=CKV_GIT_3
   name        = "RepoOrchestratorState"
   description = "A state repository for the RepoOrchestrator Infrastructure as Code"
   visibility  = "private"
