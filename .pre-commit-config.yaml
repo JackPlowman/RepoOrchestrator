@@ -52,7 +52,7 @@ repos:
         language: node
         entry: prettier
         additional_dependencies:
-          - prettier@3.9.4
+          - prettier@3.9.5
         args: ["--check"]
         files: "(?i)(\\.(md|markdown|ya?ml|json)$|^(README|LICENSE|CONTRIBUTING|CODE_OF_CONDUCT|SECURITY|SUPPORT)(\\.md)?$)"
       - id: justfile-format-check
@@ -60,7 +60,7 @@ repos:
         language: python
         entry: just
         additional_dependencies:
-          - rust-just==1.55.0
+          - rust-just==1.56.0
         args: ["format-check"]
         files: "(?i)(^justfile$|\\.just$)"
         pass_filenames: false
@@ -69,7 +69,8 @@ repos:
         language: golang
         entry: pinact
         additional_dependencies:
-          - github.com/suzuki-shunsuke/pinact/v3/cmd/pinact@v3.9.0
+          - github.com/suzuki-shunsuke/pinact/v4/cmd/pinact@v4.1.0
         args: ["run", "--verify", "--check"]
         files: "^\\.github/(workflows|actions)/.*\\.ya?ml$|(^|/)action\\.ya?ml$"
         pass_filenames: false
+        language_version: "go1.26.4"
