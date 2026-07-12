@@ -33,7 +33,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Checkov GitHub Action
-        uses: bridgecrewio/checkov-action@02a4c5d6a02367e5ea493c34c26b094302fd3f61 # v12.3075.0
+        uses: bridgecrewio/checkov-action@a7683e7b72a04503521247973281ec8142e1ac1f # v12.3112.0
         with:
           directory: .
           framework: terraform
@@ -48,7 +48,7 @@ jobs:
     strategy:
       matrix:
         language: [actions]
-    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@770e0f8d83d2cf12795ae93c33ff48b731c41201 # v2026.06.30.01
+    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@c0ea11ac152de03bcdc6415d89b51a178f68e754 # v2026.07.05.01
     with:
       language: ${{ matrix.language }}
 
@@ -59,7 +59,7 @@ jobs:
       actions: read # Allow the workflow to read actions metadata
       pull-requests: write # Allow the workflow to create and modify pull request comments
       security-events: write # Allow the workflow to upload analysis results
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@770e0f8d83d2cf12795ae93c33ff48b731c41201 # v2026.06.30.01
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@c0ea11ac152de03bcdc6415d89b51a178f68e754 # v2026.07.05.01
     secrets:
       workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
 
