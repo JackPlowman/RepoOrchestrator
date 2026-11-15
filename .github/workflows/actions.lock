@@ -10,7 +10,7 @@ workflows:
         - 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1'
         - 'anchore/scan-action@27805bf3b4e84b4a5c980df22ed233c00390a439'
         - 'aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25'
-        - 'bridgecrewio/checkov-action@02a4c5d6a02367e5ea493c34c26b094302fd3f61'
+        - 'bridgecrewio/checkov-action@45edc9d8856b664db2ec251f5f8632361f0a67aa'
         - 'davidanson/markdownlint-cli2-action@696eb3f2509270d7b882d2aa68347bc676e7af34'
         - 'extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3'
         - 'github/codeql-action@33d7b85da1a04171e211befe2c739303b9a4c066'
@@ -94,9 +94,9 @@ dependencies:
         uses:
             - 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae'
             - 'aquasecurity/setup-trivy@3fb12ec12f41e471780db15c232d5dd185dcb514'
-    'bridgecrewio/checkov-action@02a4c5d6a02367e5ea493c34c26b094302fd3f61':
-        ref: 'v12.3075.0'
-        commit: 'sha1-02a4c5d6a02367e5ea493c34c26b094302fd3f61'
+    'bridgecrewio/checkov-action@45edc9d8856b664db2ec251f5f8632361f0a67aa':
+        ref: 'v12.3139.0'
+        commit: 'sha1-45edc9d8856b664db2ec251f5f8632361f0a67aa'
         owner_id: 48174253
         repo_id: 256738016
     'davidanson/markdownlint-cli2-action@696eb3f2509270d7b882d2aa68347bc676e7af34':
