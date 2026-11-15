@@ -59,7 +59,7 @@ module "project-status-checker_default_branch_protection" {
     ],
     local.common_required_status_checks
   )
-  required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff", "SonarCloud"])
+  required_code_scanning_tools = concat(local.common_code_scanning_tools, ["Ruff"])
 
   depends_on = [github_repository.project-status-checker]
 }
