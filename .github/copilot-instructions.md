@@ -22,7 +22,7 @@
 
 - `.github/workflows/code-checks.yml` runs reusable common checks plus CodeQL and an inline Checkov scan; keep secrets named `GITHUB_TOKEN` except `clean-caches.yml` which expects `GH_TOKEN`.
 - `pull-request-tasks.yml` and `sync-labels.yml` rely on the reusable workflows repo—updating workflow versions requires bumping the pinned commit SHA everywhere.
-- `pre-commit-config.yml` mirrors CI by running `just` targets (`prettier-check`, `zizmor-check`, `pinact-check`, etc.) before commits; ensure new tooling has a matching `just` command before adding hooks.
+- `.pre-commit-config.yaml` mirrors CI checks such as Prettier, Zizmor and Actions lockfile coverage. Use `just actions-lock-check` to verify the lockfile against GitHub.
 
 ## Working locally
 
