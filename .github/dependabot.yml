@@ -14,8 +14,6 @@ updates:
         applies-to: "version-updates"
         patterns:
           - "*"
-        exclude-patterns:
-          - "JackPlowman/reusable-workflows"
         update-types:
           - "patch"
           - "minor"
