@@ -96,7 +96,7 @@ jobs:
         with:
           just-version: "1.59.0"
       - name: Run Prek Action
-        uses: j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d # v3.1.0
+        uses: j178/prek-action@7b101f8338a08d2bd6fdb3625e4e7692428763a3 # v3.1.1
         with:
           prek-version: "0.5.10"
           install-only: "true"
@@ -212,7 +212,7 @@ jobs:
         with:
           just-version: "1.59.0"
       - name: Run Prek Action
-        uses: j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d # v3.1.0
+        uses: j178/prek-action@7b101f8338a08d2bd6fdb3625e4e7692428763a3 # v3.1.1
         with:
           prek-version: "0.5.10"
 
@@ -328,7 +328,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Checkov GitHub Action
-        uses: bridgecrewio/checkov-action@02a4c5d6a02367e5ea493c34c26b094302fd3f61 # v12.3075.0
+        uses: bridgecrewio/checkov-action@3f0caf0c3aa9f56ade6b49f6e60b63aaeafb75a3 # v12.3141.0
         with:
           directory: .
           framework: terraform
